@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.badge {
+  @apply relative inline-block px-2 py-1 text-xs font-bold bg-gray-200;
+  @apply before:w-[2px] before:h-[2px] before:absolute before:content-[''] before:top-[2px] before:left-[2px] before:bg-white/20;
+  @apply after:w-[2px] after:h-[2px] after:absolute after:content-[''] after:bottom-[2px] after:right-[2px] after:bg-black/20;
+  clip-path: polygon(0 2px, 2px 2px, 2px 0, calc(100% - 2px) 0, calc(100% - 2px) 2px, 100% 2px, 100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 2px 100%, 2px calc(100% - 2px), 0 calc(100% - 2px));
+  box-shadow:
+    /* bottom right */
+    inset -2px -2px 0px rgba(0, 0, 0, 0.2),
+    /* top left */
+    inset 2px 2px 0px rgba(255, 255, 255, 0.2);
+}
