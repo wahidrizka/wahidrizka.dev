@@ -10,9 +10,9 @@ export default function SEO({ title, description, url }: ISEOProps) {
 	return (
 		<Head>
 			<title>{title}</title>
-			<link rel="canonical" href={url} />
+			{url && <link rel="canonical" href={url} />}
 			<meta name="title" content={title} />
-			<meta name="description" content={description} />
+			{description && <meta name="description" content={description} />}
 			<meta name="author" content="Wahid Rizka Fathurrohman" />
 			<meta
 				name="keywords"

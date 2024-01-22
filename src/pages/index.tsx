@@ -6,14 +6,16 @@ import ComingSoon from "./comingsoon";
 const Home = () => {
 	return (
 		<>
-			{/* <SEO
+			<SEO
 				title="Front-end Developer - Wahid Rizka Fathurrohman"
 				description="An individual identifying as a Software Engineer expresses a keen interest in front-end development and possesses a comprehensive understanding of UI Design."
 			/>
-			<AppLayout>
-				<h1>Hello world</h1>
-			</AppLayout> */}
-			<ComingSoon />
+			<AppLayout isHeader>
+				{/* <div className="mx-auto container relative h-screen flex items-center justify-center">
+					<h1>Hello world</h1>
+				</div> */}
+				<ComingSoon />
+			</AppLayout>
 		</>
 	);
 };

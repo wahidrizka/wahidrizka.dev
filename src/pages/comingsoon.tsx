@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const ComingSoon = () => {
 	return (
-		<>
+		<div className="dark">
 			<SEO
 				title="Coming Soon - Software Developer"
 				url="#"
@@ -31,7 +31,7 @@ const ComingSoon = () => {
 					</h1>
 				</section>
 			</AppLayout>
-		</>
+		</div>
 	);
 };
 

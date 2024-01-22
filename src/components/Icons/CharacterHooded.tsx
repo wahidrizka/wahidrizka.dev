@@ -1,9 +1,11 @@
+import React from "react";
+
 interface IIconProps {
 	className?: string;
 	color?: string;
 }
 
-const CharacterHooded = ({ className, color }: IIconProps) => (
+const CharacterHooded: React.FC<IIconProps> = ({ className, color }) => (
 	<svg
 		className={className}
 		width="16"

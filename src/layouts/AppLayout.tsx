@@ -1,6 +1,6 @@
 import React from "react";
 import { Pixelify_Sans } from "next/font/google";
-import Header from "@/components/Navigation/Header";
+import { Header } from "@/components/Navigation";
 
 const pixelifySans = Pixelify_Sans({ subsets: ["latin"] });
 
@@ -10,13 +10,11 @@ interface ILayoutProps {
 	isFooter?: boolean;
 }
 
-const AppLayout: React.FC<ILayoutProps> = ({ children, isHeader }) => {
-	return (
-		<>
-			<Header isHeader={isHeader} />
-			<main className={pixelifySans.className}>{children}</main>
-		</>
-	);
-};
+const AppLayout: React.FC<ILayoutProps> = ({ children, isHeader }) => (
+	<>
+		<Header isHeader={isHeader} />
+		<main className={pixelifySans.className}>{children}</main>
+	</>
+);
 
 export default AppLayout;

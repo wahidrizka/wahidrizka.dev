@@ -1,9 +1,11 @@
+import React from "react";
+
 interface IIconProps {
 	className?: string;
 	color?: string;
 }
 
-const Cat = ({ className, color }: IIconProps) => (
+const Cat: React.FC<IIconProps> = ({ className, color }) => (
 	<svg
 		className={className}
 		width="16px"
