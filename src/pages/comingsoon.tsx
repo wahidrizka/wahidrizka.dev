@@ -24,7 +24,7 @@ const ComingSoon = () => {
 							"text-4xl font-bold text-sky-500 dark:text-sky-400"
 						)}
 					>
-						Stay tuned
+						Meowww!
 					</span>
 					<Image
 						priority
@@ -38,7 +38,7 @@ const ComingSoon = () => {
 							"text-xl font-medium text-sky-500 dark:text-sky-400"
 						)}
 					>
-						For something awesome!
+						The Moment You&apos;ve Been Waiting For is Almost Here.
 					</h1>
 				</section>
 			</AppLayout>
