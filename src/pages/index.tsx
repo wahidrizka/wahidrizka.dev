@@ -1,7 +1,7 @@
 import AppLayout from "@/layouts/AppLayout";
 
 import SEO from "@/components/SEO";
-import ComingSoon from "./comingsoon";
+import { HomeContainer } from "@/components/Container";
 
 const Home = () => {
 	return (
@@ -11,10 +11,7 @@ const Home = () => {
 				description="An individual identifying as a Software Engineer expresses a keen interest in front-end development and possesses a comprehensive understanding of UI Design."
 			/>
 			<AppLayout isHeader>
-				{/* <div className="mx-auto container relative h-screen flex items-center justify-center">
-					<h1>Hello world</h1>
-				</div> */}
-				<ComingSoon />
+				<HomeContainer />
 			</AppLayout>
 		</>
 	);

@@ -1,3 +1,47 @@
+@import url(./fonts.css);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .font-pixels {
+    font-family: '04b03', sans-serif;
+  }
+
+
+  .Badge--version {
+    @apply relative flex items-center;
+  }
+
+  .Badge--version::before {
+    content: '';
+    @apply w-[1px] h-[1px];
+    @apply absolute;
+    @apply bg-sky-400;
+    @apply top-[1px];
+    @apply left-[1px];
+  }
+
+  .Badge--version::after {
+    content: '';
+    @apply w-[1px] h-[1px];
+    @apply absolute;
+    @apply bg-sky-400;
+    @apply top-[1px];
+    @apply right-[1px];
+  }
+
+  .Badge--version-label {
+    @apply px-2 py-1 text-xs font-bold dark:text-sky-400 bg-sky-400/10;
+    @apply border border-sky-400;
+    clip-path: polygon(
+        /* top left */
+        0 2px, 2px 2px, 2px 0,
+        /* top right */
+        calc(100% - 2px) 0, calc(100% - 2px) 2px, 100% 2px,
+        /* bottom right */
+        100% calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) 100%,
+        /* bottom left */
+        1px 100%, 1px calc(100% - 1px), 0 calc(100% - 1px));
+  }
+}
