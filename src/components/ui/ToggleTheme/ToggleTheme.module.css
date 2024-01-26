@@ -1,0 +1,41 @@
+.ToggleTheme {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ToggleTheme::before {
+  content: '';
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  @apply bg-sky-400;
+  top: 2px;
+  left: 2px;
+}
+
+.ToggleTheme::after {
+  content: '';
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  @apply bg-sky-400;
+  top: 2px;
+  right: 2px;
+}
+
+.ToggleTheme-icon {
+  @apply text-sky-400 bg-sky-400/10;
+  @apply px-2 py-1 text-xs font-bold;
+  border: 2px solid;
+  @apply border-sky-400;
+  clip-path: polygon(
+      /* top left */
+      0 4px, 4px 4px, 4px 0,
+      /* top right */
+      calc(100% - 4px) 0, calc(100% - 4px) 4px, 100% 4px,
+      /* bottom right */
+      100% calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%,
+      /* bottom left */
+      4px 100%, 4px calc(100% - 4px), 0 calc(100% - 4px));
+}
