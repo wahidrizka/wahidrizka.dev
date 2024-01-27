@@ -1,10 +1,32 @@
 import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
 
 const config: Config = {
 	darkMode: "class",
 	content: ["./src/**/*.{js,js,ts,tsx}"],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				linkHover: colors.blue[300],
+				linkHoverDark: colors.blue[200],
+
+				// background
+				primaryBg: colors.white,
+				primaryBgDark: colors.slate[900],
+				accentBg: colors.sky[400],
+
+				// foreground
+				primaryFg: colors.slate[200],
+				primaryFgDark: colors.slate[200],
+				accentFg: colors.sky[500],
+				accentFgDark: colors.sky[400],
+
+				// border
+				primaryBorder: colors.slate[900],
+				primaryBorderDark: colors.slate[50],
+				accentBorder: colors.sky[400],
+			},
+		},
 		screens: {
 			xs: "640px",
 			sm: "768px",

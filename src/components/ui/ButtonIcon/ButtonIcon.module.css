@@ -1,10 +1,10 @@
-.ToggleTheme {
+.ButtonIcon {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.ToggleTheme::before {
+.ButtonIcon::before {
   content: '';
   width: 2px;
   height: 2px;
@@ -14,7 +14,7 @@
   left: 2px;
 }
 
-.ToggleTheme::after {
+.ButtonIcon::after {
   content: '';
   width: 2px;
   height: 2px;
@@ -24,7 +24,7 @@
   right: 2px;
 }
 
-.ToggleTheme-icon {
+.ButtonIcon-icon {
   @apply text-accentFg bg-accentBg/10;
   @apply p-1 text-xs font-bold;
   border: 2px solid;
@@ -38,6 +38,6 @@
       4px 100%, 4px calc(100% - 4px), 0 calc(100% - 4px));
 }
 
-.ToggleTheme:hover .ToggleTheme-icon {
+.ButtonIcon:hover .ButtonIcon-icon {
   @apply bg-accentBg/20;
 }

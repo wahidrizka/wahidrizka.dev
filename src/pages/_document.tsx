@@ -7,7 +7,11 @@ const AppDocument = () => {
 			<Head>
 				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 			</Head>
-			<body className={clsx("antialiased bg-white dark:bg-slate-900")}>
+			<body
+				className={clsx(
+					"antialiased bg-primaryBg dark:bg-primaryBgDark bg-home"
+				)}
+			>
 				<Main />
 				<NextScript />
 			</body>

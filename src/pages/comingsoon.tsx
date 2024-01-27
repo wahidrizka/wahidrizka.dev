@@ -29,7 +29,7 @@ const ComingSoon = () => {
 						width={128}
 						height={128}
 					/>
-					<h1 className={clsx("body-pixels text-xl")}>
+					<h1 className={clsx("body-pixels text-2xl")}>
 						The Moment You&apos;ve Been Waiting For is Almost Here.
 					</h1>
 				</section>

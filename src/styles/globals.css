@@ -3,29 +3,34 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  transition: color cubic-bezier(0.33, 1, 0.68, 1) 0.3s;
-}
-
 @layer base {
   :root {
-    --oxobz-text-shadow: rgb(51, 65, 85);
-
-    --oxobz-AnchorNav-link-underline-default: rgb(14, 165, 233);
+    --color-text-shadow: rgb(30, 41, 59);
   }
 
   .dark {
-    --oxobz-text-shadow: rgb(226, 232, 240);
-
-    --brand-AnchorNav-link-underline-default: rgb(56, 189, 248);
+    --color-text-shadow: rgb(30, 41, 59);
   }
 
 
 }
 
 @layer utilities {
+  .bg-home {
+    background-image: url('../assets/pattern-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .dark {
+    .bg-home {
+      background-image: url('../assets/pattern-bg-dark.svg');
+    }
+  }
+
   .font-pixels {
-    font-family: 'xpaider pixel explosion 02', sans-serif;
+    font-family: 'VT323', monospace;
   }
 
   .Badge--version {
@@ -34,55 +39,55 @@
 
   .Badge--version::before {
     content: '';
-    @apply w-[1px] h-[1px];
+    @apply w-[2px] h-[2px];
     @apply absolute;
     @apply bg-sky-400;
-    @apply top-[1px];
-    @apply left-[1px];
+    @apply top-[2px];
+    @apply left-[2px];
   }
 
   .Badge--version::after {
     content: '';
-    @apply w-[1px] h-[1px];
+    @apply w-[2px] h-[2px];
     @apply absolute;
     @apply bg-sky-400;
-    @apply top-[1px];
-    @apply right-[1px];
+    @apply top-[2px];
+    @apply right-[2px];
   }
 
   .Badge--version-label {
-    @apply px-2 py-1 text-xs font-bold text-sky-400 dark:text-sky-400 bg-sky-400/10;
-    @apply border border-sky-400;
+    @apply px-2 font-bold text-sky-400 dark:text-sky-400 bg-sky-400/10;
+    @apply border-2 border-sky-400;
     clip-path: polygon(
         /* top left */
-        0 2px, 2px 2px, 2px 0,
+        0 4px, 4px 4px, 4px 0,
         /* top right */
-        calc(100% - 2px) 0, calc(100% - 2px) 2px, 100% 2px,
+        calc(100% - 4px) 0, calc(100% - 4px) 4px, 100% 4px,
         /* bottom right */
-        100% calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%,
+        100% calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%,
         /* bottom left */
-        2px 100%, 2px calc(100% - 2px), 0 calc(100% - 2px));
+        4px 100%, 4px calc(100% - 4px), 0 calc(100% - 4px));
 
   }
 
   .dot-bottom-right-1 {
     content: '';
-    width: 1px;
-    height: 1px;
+    width: 2px;
+    height: 2px;
     position: absolute;
     @apply bg-sky-400;
-    bottom: 1px;
-    right: 1px;
+    bottom: 2px;
+    right: 2px;
   }
 
   .dot-bottom-left-1 {
     content: '';
-    width: 1px;
-    height: 1px;
+    width: 2px;
+    height: 2px;
     position: absolute;
     @apply bg-sky-400;
-    bottom: 1px;
-    left: 1px;
+    bottom: 2px;
+    left: 2px;
   }
 
   .dot-bottom-right-2 {
@@ -108,106 +113,52 @@
 
 @layer components {
   .heading-pixels {
-    @apply text-slate-200;
+    @apply text-primaryFg dark:text-primaryFgDark;
     text-shadow:
-      var(--oxobz-text-shadow) -0.222rem -0.222rem 0px,
-      var(--oxobz-text-shadow) 0.222rem -0.222rem 0px,
-      var(--oxobz-text-shadow) -0.222rem 0.222rem 0px,
-      var(--oxobz-text-shadow) 0.222rem 0.222rem 0px,
-      var(--oxobz-text-shadow) -0.111rem -0.222rem 0px,
-      var(--oxobz-text-shadow) 0.111rem -0.222rem 0px,
-      var(--oxobz-text-shadow) -0.111rem 0.222rem 0px,
-      var(--oxobz-text-shadow) 0.111rem 0.222rem 0px,
-      var(--oxobz-text-shadow) -0.222rem -0.111rem 0px,
-      var(--oxobz-text-shadow) 0.222rem -0.111rem 0px,
-      var(--oxobz-text-shadow) -0.222rem 0.111rem 0px,
-      var(--oxobz-text-shadow) 0.222rem 0.111rem 0px,
-      var(--oxobz-text-shadow) 0.111rem 0.444rem 0px,
-      var(--oxobz-text-shadow) 0.222rem 0.444rem 0px,
-      var(--oxobz-text-shadow) 0.333rem 0.444rem 0px,
-      var(--oxobz-text-shadow) 0.444rem 0.444rem 0px,
-      var(--oxobz-text-shadow) 0.444rem 0.333rem 0px,
-      var(--oxobz-text-shadow) 0.444rem 0.222rem 0px,
-      var(--oxobz-text-shadow) 0.444rem 0.111rem 0px;
+      var(--color-text-shadow) -0.222rem -0.222rem 0px,
+      var(--color-text-shadow) 0.222rem -0.222rem 0px,
+      var(--color-text-shadow) -0.222rem 0.222rem 0px,
+      var(--color-text-shadow) 0.222rem 0.222rem 0px,
+      var(--color-text-shadow) -0.111rem -0.222rem 0px,
+      var(--color-text-shadow) 0.111rem -0.222rem 0px,
+      var(--color-text-shadow) -0.111rem 0.222rem 0px,
+      var(--color-text-shadow) 0.111rem 0.222rem 0px,
+      var(--color-text-shadow) -0.222rem -0.111rem 0px,
+      var(--color-text-shadow) 0.222rem -0.111rem 0px,
+      var(--color-text-shadow) -0.222rem 0.111rem 0px,
+      var(--color-text-shadow) 0.222rem 0.111rem 0px,
+      var(--color-text-shadow) 0.111rem 0.444rem 0px,
+      var(--color-text-shadow) 0.222rem 0.444rem 0px,
+      var(--color-text-shadow) 0.333rem 0.444rem 0px,
+      var(--color-text-shadow) 0.444rem 0.444rem 0px,
+      var(--color-text-shadow) 0.444rem 0.333rem 0px,
+      var(--color-text-shadow) 0.444rem 0.222rem 0px,
+      var(--color-text-shadow) 0.444rem 0.111rem 0px;
     @apply uppercase;
   }
 
-  .dark {
-    .heading-pixels {
-      @apply text-slate-900;
-      text-shadow:
-        var(--oxobz-text-shadow) -0.222rem -0.222rem 0px,
-        var(--oxobz-text-shadow) 0.222rem -0.222rem 0px,
-        var(--oxobz-text-shadow) -0.222rem 0.222rem 0px,
-        var(--oxobz-text-shadow) 0.222rem 0.222rem 0px,
-        var(--oxobz-text-shadow) -0.111rem -0.222rem 0px,
-        var(--oxobz-text-shadow) 0.111rem -0.222rem 0px,
-        var(--oxobz-text-shadow) -0.111rem 0.222rem 0px,
-        var(--oxobz-text-shadow) 0.111rem 0.222rem 0px,
-        var(--oxobz-text-shadow) -0.222rem -0.111rem 0px,
-        var(--oxobz-text-shadow) 0.222rem -0.111rem 0px,
-        var(--oxobz-text-shadow) -0.222rem 0.111rem 0px,
-        var(--oxobz-text-shadow) 0.222rem 0.111rem 0px,
-        var(--oxobz-text-shadow) 0.111rem 0.444rem 0px,
-        var(--oxobz-text-shadow) 0.222rem 0.444rem 0px,
-        var(--oxobz-text-shadow) 0.333rem 0.444rem 0px,
-        var(--oxobz-text-shadow) 0.444rem 0.444rem 0px,
-        var(--oxobz-text-shadow) 0.444rem 0.333rem 0px,
-        var(--oxobz-text-shadow) 0.444rem 0.222rem 0px,
-        var(--oxobz-text-shadow) 0.444rem 0.111rem 0px;
-      @apply uppercase;
-    }
-  }
-
   .body-pixels {
-    @apply text-slate-200;
+    @apply text-primaryFg dark:text-primaryFgDark;
     text-shadow:
-      var(--oxobz-text-shadow) -0.055rem -0.055rem 0px,
-      var(--oxobz-text-shadow) 0.055rem -0.055rem 0px,
-      var(--oxobz-text-shadow) -0.055rem 0.055rem 0px,
-      var(--oxobz-text-shadow) 0.055rem 0.055rem 0px,
-      var(--oxobz-text-shadow) -0.042rem -0.055rem 0px,
-      var(--oxobz-text-shadow) 0.042rem -0.055rem 0px,
-      var(--oxobz-text-shadow) -0.042rem 0.055rem 0px,
-      var(--oxobz-text-shadow) 0.042rem 0.055rem 0px,
-      var(--oxobz-text-shadow) -0.055rem -0.042rem 0px,
-      var(--oxobz-text-shadow) 0.055rem -0.042rem 0px,
-      var(--oxobz-text-shadow) -0.055rem 0.042rem 0px,
-      var(--oxobz-text-shadow) 0.055rem 0.042rem 0px,
-      var(--oxobz-text-shadow) 0.042rem 0.166rem 0px,
-      var(--oxobz-text-shadow) 0.055rem 0.166rem 0px,
-      var(--oxobz-text-shadow) 0.083rem 0.166rem 0px,
-      var(--oxobz-text-shadow) 0.166rem 0.166rem 0px,
-      var(--oxobz-text-shadow) 0.166rem 0.083rem 0px,
-      var(--oxobz-text-shadow) 0.166rem 0.055rem 0px,
-      var(--oxobz-text-shadow) 0.166rem 0.042rem 0px;
+      var(--color-text-shadow) -0.055rem -0.055rem 0px,
+      var(--color-text-shadow) 0.055rem -0.055rem 0px,
+      var(--color-text-shadow) -0.055rem 0.055rem 0px,
+      var(--color-text-shadow) 0.055rem 0.055rem 0px,
+      var(--color-text-shadow) -0.042rem -0.055rem 0px,
+      var(--color-text-shadow) 0.042rem -0.055rem 0px,
+      var(--color-text-shadow) -0.042rem 0.055rem 0px,
+      var(--color-text-shadow) 0.042rem 0.055rem 0px,
+      var(--color-text-shadow) -0.055rem -0.042rem 0px,
+      var(--color-text-shadow) 0.055rem -0.042rem 0px,
+      var(--color-text-shadow) -0.055rem 0.042rem 0px,
+      var(--color-text-shadow) 0.055rem 0.042rem 0px,
+      var(--color-text-shadow) 0.042rem 0.166rem 0px,
+      var(--color-text-shadow) 0.055rem 0.166rem 0px,
+      var(--color-text-shadow) 0.083rem 0.166rem 0px,
+      var(--color-text-shadow) 0.166rem 0.166rem 0px,
+      var(--color-text-shadow) 0.166rem 0.083rem 0px,
+      var(--color-text-shadow) 0.166rem 0.055rem 0px,
+      var(--color-text-shadow) 0.166rem 0.042rem 0px;
     @apply font-bold;
-  }
-
-  .dark {
-    .body-pixels {
-      @apply text-slate-900;
-      text-shadow:
-        var(--oxobz-text-shadow) -0.055rem -0.055rem 0px,
-        var(--oxobz-text-shadow) 0.055rem -0.055rem 0px,
-        var(--oxobz-text-shadow) -0.055rem 0.055rem 0px,
-        var(--oxobz-text-shadow) 0.055rem 0.055rem 0px,
-        var(--oxobz-text-shadow) -0.042rem -0.055rem 0px,
-        var(--oxobz-text-shadow) 0.042rem -0.055rem 0px,
-        var(--oxobz-text-shadow) -0.042rem 0.055rem 0px,
-        var(--oxobz-text-shadow) 0.042rem 0.055rem 0px,
-        var(--oxobz-text-shadow) -0.055rem -0.042rem 0px,
-        var(--oxobz-text-shadow) 0.055rem -0.042rem 0px,
-        var(--oxobz-text-shadow) -0.055rem 0.042rem 0px,
-        var(--oxobz-text-shadow) 0.055rem 0.042rem 0px,
-        var(--oxobz-text-shadow) 0.042rem 0.166rem 0px,
-        var(--oxobz-text-shadow) 0.055rem 0.166rem 0px,
-        var(--oxobz-text-shadow) 0.083rem 0.166rem 0px,
-        var(--oxobz-text-shadow) 0.166rem 0.166rem 0px,
-        var(--oxobz-text-shadow) 0.166rem 0.083rem 0px,
-        var(--oxobz-text-shadow) 0.166rem 0.055rem 0px,
-        var(--oxobz-text-shadow) 0.166rem 0.042rem 0px;
-      @apply font-bold;
-    }
   }
 }

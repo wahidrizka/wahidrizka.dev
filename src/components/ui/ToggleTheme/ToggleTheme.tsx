@@ -14,11 +14,7 @@ function _ToggleTheme() {
 			onClick={() => (theme == "dark" ? setTheme("light") : setTheme("dark"))}
 		>
 			<span className={clsx(styles["ToggleTheme-icon"])}>
-				{theme == "dark" ? (
-					<Icon.Sun width={16} height={16} />
-				) : (
-					<Icon.Moon width={16} height={16} />
-				)}
+				<Icon.Sun width={16} height={16} />
 			</span>
 			<span className={clsx("dot-bottom-right-2")}></span>
 			<span className={clsx("dot-bottom-left-2")}></span>

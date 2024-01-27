@@ -1,8 +1,8 @@
 .AnchorNav {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: start;
+  @apply relative;
+  @apply flex;
+  @apply items-center;
+  @apply justify-start;
   text-decoration: none;
 }
 
@@ -11,30 +11,41 @@
 }
 
 .AnchorNav-label {
-  font-weight: 700;
-  font-size: 0.875rem;
+  @apply text-lg;
   transition: color cubic-bezier(0.33, 1, 0.68, 1) 0.3s;
-  white-space: nowrap;
-  position: relative;
+  @apply whitespace-nowrap;
+  @apply relative;
 }
 
 .AnchorNav:hover .AnchorNav-label {
-  @apply text-sky-500;
+  @apply text-linkHover;
+}
+
+@media (prefers-color-scheme: dark) {
+  .AnchorNav:hover .AnchorNav-label {
+    @apply text-linkHoverDark;
+  }
 }
 
 .AnchorNav-label::after {
   content: '';
-  position: absolute;
-  bottom: -6px;
+  @apply absolute;
+  bottom: -4px;
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--oxobz-AnchorNav-link-underline-default);
+  @apply bg-accentFg;
   transition: opacity 0.3s, transform 0.3s,
     background-color 0.3s;
   opacity: 1;
   transform: scale(0);
   transform-origin: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .AnchorNav-label::after {
+    @apply bg-accentFgDark;
+  }
 }
 
 .AnchorNav:hover .AnchorNav-label::after,
