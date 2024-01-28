@@ -4,15 +4,15 @@ import styles from "./ButtonIcon.module.css";
 import Icon from "@/components/Icons";
 
 type IButtonIconProps = {
-	href: string;
+	href?: string;
+	icon: React.ReactNode;
+	onPress?: () => void;
 };
 
-function _ButtonIcon({ href }: IButtonIconProps) {
+function _ButtonIcon({ href, icon, onPress }: IButtonIconProps) {
 	return (
-		<a href={href} className={clsx(styles.ButtonIcon)}>
-			<span className={clsx(styles["ButtonIcon-icon"])}>
-				<Icon.Github width={16} height={16} />
-			</span>
+		<a href={href || "#"} className={clsx(styles.ButtonIcon)} onClick={onPress}>
+			<span className={clsx(styles["ButtonIcon-icon"])}>{icon}</span>
 			<span className={clsx("dot-bottom-right-2")}></span>
 			<span className={clsx("dot-bottom-left-2")}></span>
 		</a>

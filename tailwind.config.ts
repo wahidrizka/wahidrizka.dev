@@ -25,6 +25,9 @@ const config: Config = {
 				primaryBorder: colors.slate[900],
 				primaryBorderDark: colors.slate[50],
 				accentBorder: colors.sky[400],
+
+				// shadow
+				primaryShadow: "rgb(30 41 59 / <alpha-value>)",
 			},
 		},
 		screens: {
