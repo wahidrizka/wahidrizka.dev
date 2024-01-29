@@ -1,13 +1,12 @@
 import ComingSoon from "@/pages/comingsoon";
 import React from "react";
+import { Intro } from "../Presentational";
 
 const HomeContainer: React.FC = () => {
 	return (
 		<main>
-			<ComingSoon />
-			{/* <div className="mx-auto container relative h-screen flex items-center justify-center">
-				<h1 className="text-2xl">Hello world</h1>
-			</div> */}
+			{/* <ComingSoon /> */}
+			<Intro />
 		</main>
 	);
 };

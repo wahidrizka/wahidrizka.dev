@@ -9,7 +9,7 @@
   }
 
   .dark {
-    --color-text-shadow: rgb(30, 41, 59);
+    --color-text-shadow: rgb(226, 232, 240);
   }
 
 
@@ -134,7 +134,7 @@
       var(--color-text-shadow) 0.444rem 0.333rem 0px,
       var(--color-text-shadow) 0.444rem 0.222rem 0px,
       var(--color-text-shadow) 0.444rem 0.111rem 0px;
-    @apply uppercase;
+    @apply font-bold;
   }
 
   .body-pixels {
@@ -160,5 +160,13 @@
       var(--color-text-shadow) 0.166rem 0.055rem 0px,
       var(--color-text-shadow) 0.166rem 0.042rem 0px;
     @apply font-bold;
+  }
+
+  .heading {
+    @apply text-6xl xs:text-8xl sm:text-7xl md:text-8xl lg:text-9xl;
+  }
+
+  .intro-heading {
+    @apply heading heading-pixels;
   }
 }

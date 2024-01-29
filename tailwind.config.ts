@@ -17,7 +17,7 @@ const config: Config = {
 
 				// foreground
 				primaryFg: colors.slate[200],
-				primaryFgDark: colors.slate[200],
+				primaryFgDark: colors.slate[900],
 				accentFg: colors.sky[500],
 				accentFgDark: colors.sky[400],
 
