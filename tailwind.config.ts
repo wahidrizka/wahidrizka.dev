@@ -6,6 +6,9 @@ const config: Config = {
 	content: ["./src/**/*.{js,js,ts,tsx}"],
 	theme: {
 		extend: {
+			fontFamily: {
+				pixels: ["Pixelify Sans", "sans-serif"],
+			},
 			colors: {
 				linkHover: colors.blue[300],
 				linkHoverDark: colors.blue[200],
@@ -27,15 +30,17 @@ const config: Config = {
 				accentBorder: colors.sky[400],
 
 				// shadow
-				primaryShadow: "rgb(30 41 59 / <alpha-value>)",
+				primaryShadow: colors.slate[800],
+				primaryShadowDark: colors.slate[200],
 			},
 		},
 		screens: {
-			xs: "640px",
-			sm: "768px",
-			md: "900px",
-			lg: "1024px",
-			xl: "1100px",
+			xs: "320px",
+			sm: "544px",
+			md: "768px",
+			lg: "1012px",
+			xl: "1280px",
+			"2xl": "1400px",
 		},
 	},
 	plugins: [],

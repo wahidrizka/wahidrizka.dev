@@ -29,10 +29,6 @@
     }
   }
 
-  .font-pixels {
-    font-family: 'VT323', monospace;
-  }
-
   .Badge--version {
     @apply relative flex items-center;
   }
@@ -109,64 +105,73 @@
     bottom: 2px;
     left: 2px;
   }
-}
 
-@layer components {
-  .heading-pixels {
-    @apply text-primaryFg dark:text-primaryFgDark;
+  .Text-shadow--extralarge {
     text-shadow:
-      var(--color-text-shadow) -0.222rem -0.222rem 0px,
-      var(--color-text-shadow) 0.222rem -0.222rem 0px,
-      var(--color-text-shadow) -0.222rem 0.222rem 0px,
-      var(--color-text-shadow) 0.222rem 0.222rem 0px,
-      var(--color-text-shadow) -0.111rem -0.222rem 0px,
-      var(--color-text-shadow) 0.111rem -0.222rem 0px,
-      var(--color-text-shadow) -0.111rem 0.222rem 0px,
-      var(--color-text-shadow) 0.111rem 0.222rem 0px,
-      var(--color-text-shadow) -0.222rem -0.111rem 0px,
-      var(--color-text-shadow) 0.222rem -0.111rem 0px,
-      var(--color-text-shadow) -0.222rem 0.111rem 0px,
-      var(--color-text-shadow) 0.222rem 0.111rem 0px,
-      var(--color-text-shadow) 0.111rem 0.444rem 0px,
-      var(--color-text-shadow) 0.222rem 0.444rem 0px,
-      var(--color-text-shadow) 0.333rem 0.444rem 0px,
-      var(--color-text-shadow) 0.444rem 0.444rem 0px,
-      var(--color-text-shadow) 0.444rem 0.333rem 0px,
-      var(--color-text-shadow) 0.444rem 0.222rem 0px,
-      var(--color-text-shadow) 0.444rem 0.111rem 0px;
-    @apply font-bold;
+      -0.222rem -0.222rem 0 var(--color-text-shadow),
+      0.222rem -0.222rem 0 var(--color-text-shadow),
+      -0.222rem 0.222rem 0 var(--color-text-shadow),
+      0.222rem 0.222rem 0 var(--color-text-shadow),
+      -0.111rem -0.222rem 0 var(--color-text-shadow),
+      0.111rem -0.222rem 0 var(--color-text-shadow),
+      -0.111rem 0.222rem 0 var(--color-text-shadow),
+      0.111rem 0.222rem 0 var(--color-text-shadow),
+      -0.222rem -0.111rem 0 var(--color-text-shadow),
+      0.222rem -0.111rem 0 var(--color-text-shadow),
+      -0.222rem 0.111rem 0 var(--color-text-shadow),
+      0.222rem 0.111rem 0 var(--color-text-shadow),
+      0.111rem 0.444rem 0 var(--color-text-shadow),
+      0.222rem 0.444rem 0 var(--color-text-shadow),
+      0.333rem 0.444rem 0 var(--color-text-shadow),
+      0.444rem 0.444rem 0 var(--color-text-shadow),
+      0.444rem 0.333rem 0 var(--color-text-shadow),
+      0.444rem 0.222rem 0 var(--color-text-shadow),
+      0.444rem 0.111rem 0 var(--color-text-shadow)
   }
 
-  .body-pixels {
-    @apply text-primaryFg dark:text-primaryFgDark;
+  .Text-shadow--large {
     text-shadow:
-      var(--color-text-shadow) -0.055rem -0.055rem 0px,
-      var(--color-text-shadow) 0.055rem -0.055rem 0px,
-      var(--color-text-shadow) -0.055rem 0.055rem 0px,
-      var(--color-text-shadow) 0.055rem 0.055rem 0px,
-      var(--color-text-shadow) -0.042rem -0.055rem 0px,
-      var(--color-text-shadow) 0.042rem -0.055rem 0px,
-      var(--color-text-shadow) -0.042rem 0.055rem 0px,
-      var(--color-text-shadow) 0.042rem 0.055rem 0px,
-      var(--color-text-shadow) -0.055rem -0.042rem 0px,
-      var(--color-text-shadow) 0.055rem -0.042rem 0px,
-      var(--color-text-shadow) -0.055rem 0.042rem 0px,
-      var(--color-text-shadow) 0.055rem 0.042rem 0px,
-      var(--color-text-shadow) 0.042rem 0.166rem 0px,
-      var(--color-text-shadow) 0.055rem 0.166rem 0px,
-      var(--color-text-shadow) 0.083rem 0.166rem 0px,
-      var(--color-text-shadow) 0.166rem 0.166rem 0px,
-      var(--color-text-shadow) 0.166rem 0.083rem 0px,
-      var(--color-text-shadow) 0.166rem 0.055rem 0px,
-      var(--color-text-shadow) 0.166rem 0.042rem 0px;
-    @apply font-bold;
+      -0.111rem -0.111rem 0 var(--color-text-shadow),
+      0.111rem -0.111rem 0 var(--color-text-shadow),
+      -0.111rem 0.111rem 0 var(--color-text-shadow),
+      0.111rem 0.111rem 0 var(--color-text-shadow),
+      -0.055rem -0.111rem 0 var(--color-text-shadow),
+      0.055rem -0.111rem 0 var(--color-text-shadow),
+      -0.055rem 0.111rem 0 var(--color-text-shadow),
+      0.055rem 0.111rem 0 var(--color-text-shadow),
+      -0.111rem -0.055rem 0 var(--color-text-shadow),
+      0.111rem -0.055rem 0 var(--color-text-shadow),
+      -0.111rem 0.055rem 0 var(--color-text-shadow),
+      0.111rem 0.055rem 0 var(--color-text-shadow),
+      0.055rem 0.222rem 0 var(--color-text-shadow),
+      0.111rem 0.222rem 0 var(--color-text-shadow),
+      0.166rem 0.222rem 0 var(--color-text-shadow),
+      0.222rem 0.222rem 0 var(--color-text-shadow),
+      0.222rem 0.166rem 0 var(--color-text-shadow),
+      0.222rem 0.111rem 0 var(--color-text-shadow),
+      0.222rem 0.055rem 0 var(--color-text-shadow)
   }
 
-  .heading {
-    @apply text-6xl xs:text-8xl sm:text-7xl md:text-8xl lg:text-9xl;
-  }
-
-  .intro-heading {
-    @apply heading heading-pixels;
+  .Text-shadow--base {
+    text-shadow:
+      -0.055rem -0.055rem 0 var(--color-text-shadow),
+      0.055rem -0.055rem 0 var(--color-text-shadow),
+      -0.055rem 0.055rem 0 var(--color-text-shadow),
+      0.055rem 0.055rem 0 var(--color-text-shadow),
+      -0.042rem -0.055rem 0 var(--color-text-shadow),
+      0.042rem -0.055rem 0 var(--color-text-shadow),
+      -0.042rem 0.055rem 0 var(--color-text-shadow),
+      0.042rem 0.055rem 0 var(--color-text-shadow),
+      -0.055rem -0.042rem 0 var(--color-text-shadow),
+      0.055rem -0.042rem 0 var(--color-text-shadow),
+      -0.055rem 0.042rem 0 var(--color-text-shadow),
+      0.055rem 0.042rem 0 var(--color-text-shadow),
+      0.042rem 0.166rem 0 var(--color-text-shadow),
+      0.055rem 0.166rem 0 var(--color-text-shadow),
+      0.083rem 0.166rem 0 var(--color-text-shadow),
+      0.166rem 0.166rem 0 var(--color-text-shadow),
+      0.166rem 0.083rem 0 var(--color-text-shadow),
+      0.166rem 0.055rem 0 var(--color-text-shadow),
+      0.166rem 0.042rem 0 var(--color-text-shadow)
   }
 }

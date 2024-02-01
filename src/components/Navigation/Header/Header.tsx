@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // components
-import { AnchorNav, ToggleTheme, ButtonIcon } from "@/components/ui";
+import { AnchorNav, ToggleTheme, ButtonIcon, Heading } from "@/components/ui";
 import { Sidebar } from "../Sidebar";
 
 interface IHeaderProps {
@@ -44,7 +44,7 @@ export const Header: React.FC<IHeaderProps> = ({ isHeader }) => {
 								height={32}
 								alt="Wahid Rizka"
 							/>
-							<p className="text-2xl body-pixels uppercase">wahidrizka.dev</p>
+							{/* Brand name here */}
 						</Link>
 						{/* <div className={clsx("Badge--version")}>
 						<p className={clsx("Badge--version-label")}>
