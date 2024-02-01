@@ -20,13 +20,13 @@ const ComingSoon = () => {
 						"flex flex-col items-center justify-center min-h-screen space-y-4 px-4 text-center"
 					)}
 				>
-					<Heading>Meowww</Heading>
+					<Heading>Hi there</Heading>
 					<Image
 						priority
 						src={"/loading.gif"}
 						alt="Coming soon image"
-						width={128}
-						height={128}
+						width={256}
+						height={256}
 					/>
 					<Text>The Moment You&apos;ve Been Waiting For is Almost Here.</Text>
 				</section>

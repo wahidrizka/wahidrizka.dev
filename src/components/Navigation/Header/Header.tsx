@@ -6,7 +6,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 // components
-import { AnchorNav, ToggleTheme, ButtonIcon, Heading } from "@/components/ui";
+import {
+	AnchorNav,
+	ToggleTheme,
+	ButtonIcon,
+	Heading,
+	Text,
+} from "@/components/ui";
 import { Sidebar } from "../Sidebar";
 
 interface IHeaderProps {
@@ -32,19 +38,18 @@ export const Header: React.FC<IHeaderProps> = ({ isHeader }) => {
 					className={clsx(
 						"max-w-screen-lg mx-auto flex justify-between items-center",
 						"gap-4 py-4 px-4 border-b-2 border-primaryBorder/30 dark:border-primaryBorderDark/30",
-						"xl:px-0",
-						"text-primaryFg dark:text-primaryFgDark"
+						"xl:px-0"
 					)}
 				>
 					<div className={clsx("flex items-center gap-4")}>
 						<Link href="/" className={clsx("flex items-center gap-2")}>
 							<Image
-								src="/loading.gif"
-								width={32}
-								height={32}
+								src="/sung-jinwoo.png"
+								width={64}
+								height={64}
 								alt="Wahid Rizka"
 							/>
-							{/* Brand name here */}
+							<Text size="300">WahidRizka</Text>
 						</Link>
 						{/* <div className={clsx("Badge--version")}>
 						<p className={clsx("Badge--version-label")}>
@@ -64,11 +69,14 @@ export const Header: React.FC<IHeaderProps> = ({ isHeader }) => {
 						)}
 					>
 						<div className={clsx("hidden sm:flex gap-4 items-center")}>
-							<AnchorNav href="#">Home</AnchorNav>
-							<AnchorNav href="#">Quest History</AnchorNav>
+							<AnchorNav href="#">
+								<Text size="200">Home</Text>
+							</AnchorNav>
+							<AnchorNav href="#">
+								<Text size="200">Quest History</Text>
+							</AnchorNav>
 						</div>
 
-						{/* <div className={clsx("flex gap-4 items-center")}> */}
 						<div className={clsx("flex gap-4 items-center")}>
 							<ToggleTheme />
 							<ButtonIcon
