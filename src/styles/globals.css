@@ -11,11 +11,14 @@
   .dark {
     --color-text-shadow: rgb(241, 245, 249);
   }
-
-
 }
 
 @layer utilities {
+
+  .font-pixels {
+    font-family: "Pixelify Sans", sans-serif;
+  }
+
   .bg-home {
     background-image: url('../assets/pattern-bg.svg');
     background-repeat: no-repeat;
