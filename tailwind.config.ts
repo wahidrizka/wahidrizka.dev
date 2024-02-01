@@ -6,9 +6,6 @@ const config: Config = {
 	content: ["./src/**/*.{js,js,ts,tsx}"],
 	theme: {
 		extend: {
-			fontFamily: {
-				pixels: ["Pixelify Sans", "sans-serif"],
-			},
 			colors: {
 				linkHover: colors.blue[300],
 				linkHoverDark: colors.blue[200],

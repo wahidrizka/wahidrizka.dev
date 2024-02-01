@@ -1,1 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap')
+@font-face {
+  font-family: 'VT323';
+  src: url(../assets/fonts/VT323-Regular.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pixelify Sans';
+  src: url(../assets/fonts/PixelifySans-VariableFont_wght.ttf);
+  font-display: swap;
+  font-weight: 400 700;
+}
