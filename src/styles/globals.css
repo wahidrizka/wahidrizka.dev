@@ -29,7 +29,7 @@
 
   .dark {
     .bg-home {
-      background-image: url('../assets/pattern-bg-dark.svg');
+      background-image: none;
     }
   }
 
