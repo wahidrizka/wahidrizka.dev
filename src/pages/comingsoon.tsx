@@ -4,6 +4,7 @@ import clsx from "clsx";
 import SEO from "@/components/SEO";
 import AppLayout from "@/layouts/AppLayout";
 import Image from "next/image";
+import { Heading, Text } from "@/components/ui";
 
 const ComingSoon = () => {
 	return (
@@ -19,9 +20,7 @@ const ComingSoon = () => {
 						"flex flex-col items-center justify-center min-h-screen space-y-4 px-4 text-center"
 					)}
 				>
-					<span className={clsx("heading-pixels font-bold text-4xl")}>
-						Meowww
-					</span>
+					<Heading>Meowww</Heading>
 					<Image
 						priority
 						src={"/loading.gif"}
@@ -29,9 +28,7 @@ const ComingSoon = () => {
 						width={128}
 						height={128}
 					/>
-					<h1 className={clsx("body-pixels text-2xl")}>
-						The Moment You&apos;ve Been Waiting For is Almost Here.
-					</h1>
+					<Text>The Moment You&apos;ve Been Waiting For is Almost Here.</Text>
 				</section>
 			</AppLayout>
 		</div>

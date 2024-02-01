@@ -38,5 +38,8 @@ export const styles = {
 	// shadow
 	"Heading--shadow-extralarge": `Text-shadow--extralarge`,
 	"Heading--shadow-large": `Text-shadow--large`,
-	"Heading--shadow-base": `Text-shadow--base`,
+	"Heading--shadow-medium": `Text-shadow--medium`,
+	"Heading--shadow-small": `Text-shadow--small`,
+	"Heading--shadow-extrasmall": `Text-shadow--extrasmall`,
+	"Heading--shadow-2extrasmall": `Text-shadow--2extrasmall`,
 };

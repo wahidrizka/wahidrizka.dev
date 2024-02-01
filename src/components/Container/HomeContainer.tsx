@@ -5,8 +5,8 @@ import { Intro } from "../Presentational";
 const HomeContainer: React.FC = () => {
 	return (
 		<main>
-			{/* <ComingSoon /> */}
-			<Intro />
+			<ComingSoon />
+			{/* <Intro /> */}
 		</main>
 	);
 };

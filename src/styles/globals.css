@@ -9,7 +9,7 @@
   }
 
   .dark {
-    --color-text-shadow: rgb(226, 232, 240);
+    --color-text-shadow: rgb(241, 245, 249);
   }
 
 
@@ -152,7 +152,7 @@
       0.222rem 0.055rem 0 var(--color-text-shadow)
   }
 
-  .Text-shadow--base {
+  .Text-shadow--medium {
     text-shadow:
       -0.055rem -0.055rem 0 var(--color-text-shadow),
       0.055rem -0.055rem 0 var(--color-text-shadow),
@@ -174,4 +174,18 @@
       0.166rem 0.055rem 0 var(--color-text-shadow),
       0.166rem 0.042rem 0 var(--color-text-shadow)
   }
+
+  .Text-shadow--small {
+    text-shadow: 0.083rem 0.083rem 0 var(--color-text-shadow);
+  }
+
+  .Text-shadow--extrasmall {
+    text-shadow: 0.111rem 0.111rem 0 var(--color-text-shadow);
+  }
+
+  .Text-shadow--2extrasmall {
+    text-shadow: 0.222rem 0.222rem 0 var(--color-text-shadow);
+  }
+
+
 }

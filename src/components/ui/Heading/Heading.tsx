@@ -25,7 +25,14 @@ export const HeadingLetterSpacing = [
 	"expanded",
 ] as const;
 
-export const HeadingShadows = ["extralarge", "large", "base"] as const;
+export const HeadingShadows = [
+	"extralarge",
+	"large",
+	"medium",
+	"small",
+	"extrasmall",
+	"2extrasmall",
+] as const;
 
 export const defaultHeadingTag = HeadingTags[2];
 export const defaultHeadingShadow = HeadingShadows[0];
