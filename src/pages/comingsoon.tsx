@@ -21,14 +21,9 @@ const ComingSoon = () => {
 					)}
 				>
 					<Heading>Hi there</Heading>
-					<Image
-						priority
-						src={"/loading.gif"}
-						alt="Coming soon image"
-						width={256}
-						height={256}
-					/>
-					<Text>The Moment You&apos;ve Been Waiting For is Almost Here.</Text>
+					<Text weight="semibold" shadow="large">
+						The Moment You&apos;ve Been Waiting For is Almost Here.
+					</Text>
 				</section>
 			</AppLayout>
 		</div>
