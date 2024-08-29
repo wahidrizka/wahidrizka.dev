@@ -7,8 +7,8 @@ const Home = () => {
 	return (
 		<>
 			<SEO
-				title="Front-end Developer - Wahid Rizka Fathurrohman"
-				description="An individual identifying as a Software Engineer expresses a keen interest in front-end development and possesses a comprehensive understanding of UI Design."
+				title="Web Developer - Wahid Rizka Fathurrohman"
+				description="An individual identifying as a Software Engineer expresses a keen interest in Full Stack Development and possesses a comprehensive understanding of Front-end Development."
 			/>
 			<AppLayout isHeader>
 				<Intro />
