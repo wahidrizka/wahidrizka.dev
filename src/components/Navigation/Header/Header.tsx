@@ -4,6 +4,7 @@ import clsx from "clsx";
 import I from "@/components/Icons";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 // components
 import {
@@ -21,6 +22,7 @@ interface IHeaderProps {
 
 export const Header: React.FC<IHeaderProps> = ({ isHeader }) => {
 	const [openSidebar, setOpenSidebar] = React.useState<boolean>(false);
+	const pathname = usePathname();
 
 	if (!isHeader) {
 		return null;
@@ -69,10 +71,13 @@ export const Header: React.FC<IHeaderProps> = ({ isHeader }) => {
 						)}
 					>
 						<div className={clsx("hidden sm:flex gap-4 items-center")}>
-							<AnchorNav href="#">
+							<AnchorNav href="/" isActive={pathname === "/"}>
 								<Text size="200">Home</Text>
 							</AnchorNav>
-							<AnchorNav href="#">
+							<AnchorNav
+								href="/quest-history"
+								isActive={pathname === "/quest-history"}
+							>
 								<Text size="200">Quest History</Text>
 							</AnchorNav>
 						</div>
