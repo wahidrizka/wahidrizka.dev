@@ -1,3 +1,3 @@
-export * from "./Home";
-export * from "./Creations";
-export * from "./Contributions";
+export * from "./Home/Home";
+export * from "./Creations/Creations";
+export * from "./Contributions/Contributions";
