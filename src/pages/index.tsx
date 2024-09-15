@@ -86,7 +86,7 @@ export default function Home() {
 
 							<div className="col-12 py-3 mt-5">
 								<div className="position-relative">
-									<Marquee pauseOnHover speed={100} direction="right">
+									<Marquee pauseOnHover speed={50} direction="right">
 										{technologies.map((tech, index) => (
 											<TechStackCard
 												key={index}
@@ -106,7 +106,7 @@ export default function Home() {
 										))}
 									</Marquee>
 
-									<Marquee pauseOnHover speed={100} direction="right">
+									<Marquee pauseOnHover speed={150} direction="right">
 										{technologies.map((tech, index) => (
 											<TechStackCard
 												key={index}
