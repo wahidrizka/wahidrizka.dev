@@ -1,9 +1,0 @@
-@media screen and (min-width: 63.25rem) {
-  .SubNav__heading-container {
-    margin-inline-end: var(--base-size-24);
-  }
-}
-
-.Template__SubNav {
-  background-color: transparent;
-}
