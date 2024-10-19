@@ -517,7 +517,7 @@ const _SearchInternal = (
 		onSubmit,
 		onChange,
 	}: SearchProps,
-	ref
+	ref: React.LegacyRef<unknown> | undefined
 ) => {
 	const dialogRef = useRef<HTMLDivElement | null>(null);
 
