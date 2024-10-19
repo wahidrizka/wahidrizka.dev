@@ -401,7 +401,7 @@ function Root({
 										)}
 										{hasLinks && !menuHidden && (
 											<NavigationVisbilityObserver
-												showOnlyOnNarrow
+												// showOnlyOnNarrow
 												className={clsx(
 													styles["NavBar-primary-nav-list--visible"]
 												)}
