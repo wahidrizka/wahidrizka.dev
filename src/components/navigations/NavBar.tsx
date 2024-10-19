@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, {
 	useState,
 	useCallback,
@@ -533,8 +534,8 @@ const _SearchInternal = (
 	const [liveRegion, setLiveRegion] = useState<boolean>(false);
 
 	const handleClose = useCallback(
-		(event = null) => {
-			if (handlerFn) handlerFn(event);
+		(event: MouseEvent | TouchEvent | FocusEvent | null = null) => {
+			if (handlerFn && event) handlerFn(event);
 			setActiveDescendant(-1);
 		},
 		[handlerFn]
@@ -553,7 +554,7 @@ const _SearchInternal = (
 	});
 
 	const handleAriaFocus = useCallback(
-		(event) => {
+		(event: any) => {
 			const supportedKeys = ["ArrowDown", "ArrowUp", "Escape", "Enter"];
 			const currentCount = activeDescendant;
 			const searchResultsLength = searchResults ? searchResults.length : 0;
@@ -625,7 +626,7 @@ const _SearchInternal = (
 				<button
 					aria-label="Toggle search bar"
 					className={styles["NavBar-search-button"]}
-					onClick={handlerFn as (event) => void}
+					onClick={handlerFn as (event: any) => void}
 					data-testid="toggle-search"
 				>
 					<SearchIcon aria-label="Search icon" />
@@ -675,7 +676,9 @@ const _SearchInternal = (
 								styles["NavBar-menu-button"],
 								styles["NavBar-menu-button--close"]
 							)}
-							onClick={handleClose}
+							onClick={(event: React.MouseEvent<HTMLButtonElement>) =>
+								handleClose(event as unknown as MouseEvent)
+							}
 						>
 							<XIcon size={24} />
 						</button>
@@ -770,7 +773,7 @@ const _SearchInternal = (
 	);
 };
 
-const Search = forwardRef(_SearchInternal);
+const Search = _SearchInternal;
 
 type CTAActionProps = {
 	href: string;
