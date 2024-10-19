@@ -1,6 +1,6 @@
-import { TechStack } from "./types";
+import { TechnologyItem } from "@/types";
 
-export const techStackData: TechStack[] = [
+export const techStackData: TechnologyItem[] = [
 	// Markup, Programming Languages, and Styles
 	{ techName: "Bash", techIcon: "bash" },
 	{ techName: "C#", techIcon: "cs" },
