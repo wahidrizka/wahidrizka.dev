@@ -1,0 +1,21 @@
+.Section-rounded {
+  padding-top: 5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .Section-rounded {
+      padding-top: 0rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .Center-until-medium {
+      max-width: 488px;
+      margin-right: auto;
+      margin-left: auto;
+  }
+}
+
+.wr-BentoItem-content {
+  padding: 4rem 4rem 0 4rem;
+}

@@ -23,7 +23,7 @@ export function AppLayout({
 						))}
 						<NavBar.PrimaryAction href="#">Contact Me</NavBar.PrimaryAction>
 						<NavBar.SecondaryAction href="#">
-							<span style={{ marginRight: "4px" }}>
+							<span style={{ marginRight: "0.75rem" }}>
 								<DownloadIcon />
 							</span>
 							<span>Resume</span>

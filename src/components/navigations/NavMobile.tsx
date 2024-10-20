@@ -5,7 +5,7 @@ import Image from "next/image";
 import { NavigationItems } from "@/data";
 import Link from "next/link";
 import { Button, Text } from "@primer/react-brand";
-import { ChevronDownIcon } from "@primer/styled-octicons";
+import { ChevronDownIcon, DownloadIcon } from "@primer/styled-octicons";
 
 export const NavMobile = () => {
 	const [hasScrolled, setHasScrolled] = useState(false);
@@ -104,11 +104,21 @@ export const NavMobile = () => {
 								<Button
 									variant="primary"
 									as="a"
-									href="/contact"
+									href="#"
 									size="small"
 									hasArrow={false}
 								>
 									Contact
+								</Button>
+								<Button
+									as="a"
+									href="#"
+									size="small"
+									hasArrow={false}
+									style={{ marginLeft: "0.5rem" }}
+									leadingVisual={<DownloadIcon />}
+								>
+									Resume
 								</Button>
 							</div>
 						</div>
