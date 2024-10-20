@@ -1,2 +1,2 @@
 export * from "./Navigation";
-export * from "./Technology";
+export * from "./technologies";

@@ -19,3 +19,19 @@
 .wr-BentoItem-content {
   padding: 4rem 4rem 0 4rem;
 }
+
+.wr-Features-techStackContainer {
+  display: grid;
+  gap: var(--base-size-16);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.wr-Features-techStackButton {
+  position: relative;
+  height: auto;
+  padding: var(--base-size-16) var(--base-size-8) var(--base-size-16) var(--base-size-8);
+  text-align: center;
+  border-radius: 0.625rem;
+  border-top: 1px solid var(--base-color-scale-gray-1);
+  box-shadow: 0 0 0 1px rgba(53, 72, 91, .14), 0 3px 2px rgba(0, 0, 0, .04), 0 7px 5px rgba(0, 0, 0, .02), 0 13px 10px rgba(0, 0, 0, .02), 0 22px 17px rgba(0, 0, 0, .02) !important;
+}

@@ -8,25 +8,18 @@ import {
 	Stack,
 	Text,
 	Image,
-	Button,
-	Avatar,
 	Label,
 } from "@primer/react-brand";
+import Marquee from "react-fast-marquee";
+import StackIcon from "tech-stack-icons";
+import { technologies } from "@/data";
 
 export const Intro = () => {
-	const technologies = [
-		{ id: 1 },
-		{ id: 2 },
-		{ id: 3 },
-		{ id: 4 },
-		{ id: 5 },
-		{ id: 6 },
-		{ id: 7 },
-		{ id: 8 },
-		{ id: 9 },
+	const jobTitles = [
+		{ id: 1, name: "Full Stack Developer", color: "blue-purple" },
+		{ id: 2, name: "Front-End Developer", color: "green-blue" },
+		{ id: 3, name: "Software Engineer", color: "pink-blue" },
 	];
-
-	const socials = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }];
 	return (
 		<div
 			data-color-mode="light"
@@ -43,6 +36,7 @@ export const Intro = () => {
 						<div className={clsx(styles["Center-until-medium"])}>
 							<Stack gap="spacious" padding="none">
 								<Bento>
+									{/* Intro */}
 									<Bento.Item
 										columnSpan={{
 											xsmall: 12,
@@ -53,6 +47,7 @@ export const Intro = () => {
 										}}
 									>
 										<Bento.Content
+											padding={{ xsmall: "normal", xlarge: "spacious" }}
 											horizontalAlign="center"
 											verticalAlign="center"
 											className={clsx(styles["wr-BentoItem-content"])}
@@ -73,13 +68,14 @@ export const Intro = () => {
 												Front-End Developer
 											</Label>
 											<Bento.Heading
-												size="5"
+												size="6"
 												weight="bold"
+												variant="muted"
 												style={{ marginTop: "0.5rem" }}
 											>
 												Wahid Rizka Fathurrohman
 											</Bento.Heading>
-											<Text>
+											<Text size="100">
 												Fullstack Developer with a passion for Software
 												Engineering, combining beautiful and functional in
 												front-end user interfaces and solid Model View
@@ -87,6 +83,8 @@ export const Intro = () => {
 											</Text>
 										</Bento.Content>
 									</Bento.Item>
+
+									{/* Title */}
 									<Bento.Item
 										columnSpan={{
 											xsmall: 12,
@@ -95,7 +93,30 @@ export const Intro = () => {
 										rowSpan={{
 											xsmall: 1,
 										}}
-									></Bento.Item>
+									>
+										<Bento.Content
+											verticalAlign="center"
+											horizontalAlign="center"
+											className={clsx("px-1")}
+											leadingVisual={
+												<>
+													<Marquee autoFill>
+														{jobTitles.map((jobTitle, index) => (
+															<Label
+																key={index}
+																color="blue-purple"
+																className={clsx("mx-1")}
+															>
+																{jobTitle.name}
+															</Label>
+														))}
+													</Marquee>
+												</>
+											}
+										></Bento.Content>
+									</Bento.Item>
+
+									{/* Technologies */}
 									<Bento.Item
 										columnSpan={{
 											xsmall: 12,
@@ -105,7 +126,37 @@ export const Intro = () => {
 											xsmall: 2,
 											large: 3,
 										}}
-									></Bento.Item>
+									>
+										<Bento.Content
+											padding={{ xsmall: "normal", xlarge: "spacious" }}
+											horizontalAlign="center"
+											verticalAlign="center"
+										>
+											<Text size="300" weight="bold">
+												Technology that I currently ❤️ and use
+											</Text>
+										</Bento.Content>
+
+										<Bento.Visual
+											padding={{ xsmall: "normal", xlarge: "spacious" }}
+											fillMedia={false}
+											className={clsx(styles["wr-Features-techStackContainer"])}
+										>
+											{technologies.map((technology, index) => (
+												<div
+													key={index}
+													className={clsx(
+														styles["wr-Features-techStackButton"]
+													)}
+												>
+													<StackIcon
+														name={technology.name}
+														className={clsx("size-10")}
+													/>
+												</div>
+											))}
+										</Bento.Visual>
+									</Bento.Item>
 								</Bento>
 							</Stack>
 						</div>
