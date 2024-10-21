@@ -11,7 +11,7 @@ export default function Home() {
 				description="I am a Fullstack Developer with a strong interest in Software Engineering."
 			/>
 
-			<div style={{ height: "300vh" }}>
+			<div>
 				<Intro />
 			</div>
 		</AppLayout>
