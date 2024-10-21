@@ -20,9 +20,9 @@ import {
 	SparklesText,
 	TechnologyBadge,
 	TypingAnimation,
+	LinkedInIcon,
 } from "@/components";
 import Link from "next/link";
-import { LinkedInIcon } from "@/components/icons/LinkedinIcon";
 
 export const Intro = () => {
 	const jobTitles = [
