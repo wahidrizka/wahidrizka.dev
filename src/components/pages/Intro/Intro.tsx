@@ -163,6 +163,7 @@ export const Intro = () => {
 										>
 											<Bento.Content
 												verticalAlign="center"
+												className={clsx("py-8")}
 												leadingVisual={
 													<>
 														<Label
@@ -216,7 +217,7 @@ export const Intro = () => {
 										</Bento.Item>
 
 										{/* Socials */}
-										{socials.map((social, socialIndex) => (
+										{/* {socials.map((social, socialIndex) => (
 											<Bento.Item
 												key={socialIndex}
 												columnSpan={{ xsmall: 6, medium: 3 }}
@@ -235,7 +236,7 @@ export const Intro = () => {
 													style={{ paddingTop: "1rem" }}
 												></Bento.Content>
 											</Bento.Item>
-										))}
+										))} */}
 									</Bento>
 								</Stack>
 							</div>
