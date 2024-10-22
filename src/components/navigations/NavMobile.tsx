@@ -81,7 +81,6 @@ export const NavMobile = () => {
 				<div
 					className={clsx(styles["NavMobile__postScrollContent"])}
 					role="menubar"
-					inert={true}
 				>
 					<div>
 						<div

@@ -10,54 +10,15 @@ import {
 	Image,
 	Label,
 	AnimationProvider,
+	Timeline,
 } from "@primer/react-brand";
 import Marquee from "react-fast-marquee";
-import { technologies } from "@/data";
-import {
-	GitHubIcon,
-	GmailIcon,
-	InstagramIcon,
-	SparklesText,
-	TechnologyBadge,
-	TypingAnimation,
-	LinkedInIcon,
-} from "@/components";
+import { experiences, socials, technologies, titles } from "@/data";
+import { SparklesText, TechnologyBadge, TypingAnimation } from "@/components";
 import Link from "next/link";
+import { RocketIcon } from "@primer/styled-octicons";
 
 export const Intro = () => {
-	const jobTitles = [
-		{ id: 1, name: "Full Stack Developer", color: "blue-purple" },
-		{ id: 2, name: "Front-End Developer", color: "green-blue" },
-		{ id: 3, name: "Software Engineer", color: "pink-blue" },
-	];
-
-	const socials = [
-		{
-			id: 1,
-			name: "GitHub",
-			url: "https://www.github.com/wahidrizka",
-			icon: <GitHubIcon width={64} height={64} />,
-		},
-		{
-			id: 2,
-			name: "LinkedIn",
-			url: "https://www.linkedin.com/in/wahidrizka",
-			icon: <LinkedInIcon width={64} height={64} />,
-		},
-		{
-			id: 3,
-			name: "Instagram",
-			url: "",
-			icon: <InstagramIcon width={64} height={64} />,
-		},
-		{
-			id: 4,
-			name: "Email",
-			url: "",
-			icon: <GmailIcon width={64} height={64} />,
-		},
-	];
-
 	return (
 		<div
 			data-color-mode="light"
@@ -96,13 +57,14 @@ export const Intro = () => {
 														alt="wahidrizka-mark"
 														width={64}
 														height={64}
-														style={{ marginBottom: "0.5rem" }}
+														className={clsx("mb-2")}
 													/>
 												}
 											>
 												<Label
+													size="large"
 													color="blue-purple"
-													style={{ marginBottom: "0.5rem" }}
+													className={clsx("mb-2")}
 												>
 													Front-End Developer
 												</Label>
@@ -140,13 +102,14 @@ export const Intro = () => {
 												leadingVisual={
 													<>
 														<Marquee autoFill>
-															{jobTitles.map((jobTitle, index) => (
+															{titles.map((title, titleIndex) => (
 																<Label
-																	key={index}
+																	key={titleIndex}
+																	size="large"
 																	color="blue-purple"
 																	className={clsx("mx-1")}
 																>
-																	{jobTitle.name}
+																	{title.name}
 																</Label>
 															))}
 														</Marquee>
@@ -193,14 +156,69 @@ export const Intro = () => {
 											</Bento.Visual>
 										</Bento.Item>
 
+										{/* Experiences */}
 										<Bento.Item
 											columnSpan={{ xsmall: 12, medium: 6 }}
-											rowSpan={{ xsmall: 4 }}
-										></Bento.Item>
+											rowSpan={{ xsmall: 6 }}
+										>
+											<Bento.Content
+												verticalAlign="center"
+												leadingVisual={
+													<>
+														<Label
+															color="blue-purple"
+															leadingVisual={<RocketIcon />}
+															className={clsx("mb-2")}
+														>
+															2 years of
+														</Label>
+														<Text
+															size="300"
+															weight="bold"
+															variant="muted"
+															className={clsx("mt-0 mb-4")}
+														>
+															Work Experience
+														</Text>
+														<AnimationProvider>
+															<Timeline>
+																{experiences.toReversed().map((experience) => (
+																	<Timeline.Item key={experience.id}>
+																		<div
+																			className={clsx("flex flex-col gap-1")}
+																		>
+																			<Text size="100" animate="scale-in-right">
+																				<Label color="pink-blue">
+																					{experience.type}
+																				</Label>
+																				<span className={clsx("ml-2")}>
+																					{experience.role}
+																				</span>
+																			</Text>
+																			<Text
+																				size="100"
+																				variant="muted"
+																				animate="fill-in-right"
+																			>
+																				{experience.period}
+																			</Text>
+																			<Text size="200" weight="semibold">
+																				{experience.company}
+																			</Text>
+																		</div>
+																	</Timeline.Item>
+																))}
+															</Timeline>
+														</AnimationProvider>
+													</>
+												}
+											></Bento.Content>
+										</Bento.Item>
+
 										{/* Socials */}
-										{socials.map((social, index) => (
+										{socials.map((social, socialIndex) => (
 											<Bento.Item
-												key={index}
+												key={socialIndex}
 												columnSpan={{ xsmall: 6, medium: 3 }}
 											>
 												<Bento.Content
