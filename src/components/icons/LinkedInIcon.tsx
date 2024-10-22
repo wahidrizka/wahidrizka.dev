@@ -2,7 +2,7 @@ import React from "react";
 
 interface LinkedInIconProps extends React.SVGProps<SVGSVGElement> {}
 
-const LinkedInIcon: React.FC<LinkedInIconProps> = (props) => {
+export const LinkedInIcon: React.FC<LinkedInIconProps> = (props) => {
 	return (
 		<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" {...props}>
 			<g fill="none">
@@ -19,5 +19,3 @@ const LinkedInIcon: React.FC<LinkedInIconProps> = (props) => {
 		</svg>
 	);
 };
-
-export default LinkedInIcon;

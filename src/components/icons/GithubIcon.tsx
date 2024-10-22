@@ -2,7 +2,7 @@ import React from "react";
 
 interface GitHubIconProps extends React.SVGProps<SVGSVGElement> {}
 
-const GitHubIcon: React.FC<GitHubIconProps> = (props) => {
+export const GitHubIcon: React.FC<GitHubIconProps> = (props) => {
 	return (
 		<svg
 			viewBox="0 -3.5 256 256"
@@ -18,5 +18,3 @@ const GitHubIcon: React.FC<GitHubIconProps> = (props) => {
 		</svg>
 	);
 };
-
-export default GitHubIcon;

@@ -2,7 +2,7 @@ import React from "react";
 
 interface GmailIconProps extends React.SVGProps<SVGSVGElement> {}
 
-const GmailIcon: React.FC<GmailIconProps> = (props) => {
+export const GmailIcon: React.FC<GmailIconProps> = (props) => {
 	return (
 		<svg
 			viewBox="7.086 -169.483 1277.149 1277.149"
@@ -141,5 +141,3 @@ const GmailIcon: React.FC<GmailIconProps> = (props) => {
 		</svg>
 	);
 };
-
-export default GmailIcon;
