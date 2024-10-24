@@ -10,13 +10,10 @@ import {
 	Image,
 	Label,
 	AnimationProvider,
-	Timeline,
 } from "@primer/react-brand";
 import Marquee from "react-fast-marquee";
-import { experiences, socials, technologies, titles } from "@/data";
-import { SparklesText, TechnologyBadge, TypingAnimation } from "@/components";
-import Link from "next/link";
-import { RocketIcon } from "@primer/styled-octicons";
+import { technologies, titles } from "@/data";
+import { TechnologyBadge } from "@/components";
 
 export const Intro = () => {
 	return (

@@ -2,9 +2,9 @@ import { NavigationItem } from "@/types";
 
 export const NavigationItems: NavigationItem[] = [
 	{
-		id: "all",
-		url: "/all",
-		title: "All",
+		id: "home",
+		url: "/",
+		title: "Home",
 		icon: false,
 		hidden: false,
 	},

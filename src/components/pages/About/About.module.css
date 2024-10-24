@@ -1,0 +1,300 @@
+:root {
+  --site-max-width: 1280px;
+}
+
+.Section-container {
+  max-width: var(--site-max-width);
+  padding: 0 var(--base-size-20);
+  margin: 0 auto;
+}
+
+@media (min-width: 48rem) {
+  .Section-container {
+    padding-right: var(--base-size-32);
+    padding-left: var(--base-size-32);
+  }
+}
+
+.Intro {
+  padding-top: 10rem;
+}
+
+@media (min-width: 48rem) {
+  .Intro {
+    padding-top: 8rem;
+  }
+}
+
+.narrowHeadingText {
+  font-weight: 650;
+  font-stretch: 88%;
+  line-height: 1.1;
+  letter-spacing: -.01em;
+}
+
+.Spacer--medium {
+  display: block;
+  height: 40px
+}
+
+@media (min-width: 48rem) {
+  .Spacer--medium {
+    height: 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .Spacer--medium {
+    height: 48px;
+  }
+}
+
+.Spacer--large {
+  display: block;
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  .Spacer--large {
+    height: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .Spacer--large {
+    height: 80px;
+  }
+}
+
+.ToggleContainer {
+  text-align: center
+}
+
+.Toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--base-size-4);
+  padding: var(--base-size-8);
+  background-color: var(--base-color-scale-gray-1);
+  border-radius: 100px
+}
+
+.Toggle:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  pointer-events: none;
+  content: "";
+  border: 1px solid var(--base-color-scale-gray-2);
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, .08), rgba(0, 0, 0, .04));
+  mask-image: linear-gradient(rgba(0, 0, 0, .08), rgba(0, 0, 0, .04));
+  border-radius: inherit
+}
+
+.ToggleButton {
+  position: relative;
+  width: 160px;
+  padding: var(--base-size-8) 0;
+  font-weight: 500;
+  line-height: 22px;
+  color: var(--brand-color-text-default);
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  transition: background-color .2s
+}
+
+.ToggleButton:active,
+.ToggleButton:hover {
+  background-color: var(--base-color-scale-white-0)
+}
+
+.ToggleButton.isSelected {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent
+}
+
+.ToggleSelection {
+  position: absolute;
+  width: 160px;
+  height: 40px;
+  background: linear-gradient(var(--base-color-scale-white-0), hsla(0, 0%, 100%, .5));
+  border-radius: inherit;
+  transition: transform .6s cubic-bezier(.3, 0, 0, 1)
+}
+
+.ToggleSelection[data-selected="2"] {
+  transform: translateX(calc(160px + 4px))
+}
+
+.ToggleSelection[data-selected="3"] {
+  transform: translateX(calc(2 * (160px + 4px)))
+}
+
+.ToggleSelection:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  pointer-events: none;
+  content: "";
+  background-color: var(--base-color-scale-white-0);
+  background-clip: padding-box;
+  border: 2px solid var(--brand-color-border-default);
+  border-radius: inherit
+}
+
+@media (max-width: 543px) {
+  .Toggle {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--base-size-24)
+  }
+
+  .ToggleButton {
+    width: 100%
+  }
+
+  .ToggleSelection {
+    right: var(--base-size-8);
+    left: var(--base-size-8);
+    width: auto
+  }
+
+  .ToggleSelection[data-selected="2"] {
+    transform: translateY(calc(40px + 4px))
+  }
+
+  .ToggleSelection[data-selected="3"] {
+    transform: translateY(calc(2 * (40px + 4px)))
+  }
+}
+
+@media (min-width: 544px) and (max-width:767px) {
+  .ToggleContainer {
+    margin: 0 -32px
+  }
+}
+
+.Career {
+  position: relative;
+}
+
+.Career::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  content: "";
+  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .25));
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .25));
+  border: 1px solid var(--brand-color-border-default);
+  border-radius: inherit;
+}
+
+.CareerHeading {
+  margin-bottom: var(--base-size-24);
+  font-weight: 700;
+  font-stretch: 75%;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: -.005em;
+}
+
+.CareerChip {
+  display: inline-block;
+  width: 26px;
+  height: 12px;
+  margin-right: var(--base-size-16);
+  vertical-align: 6px;
+  border-radius: 24px;
+}
+
+.CareerChip--red {
+  background-color: #fe5530;
+}
+
+.CareerList {
+  list-style: none;
+}
+
+.CareerItem {
+  padding-top: var(--base-size-24);
+  margin-top: var(--base-size-28);
+  border: 0;
+  border-top: 1px solid var(--brand-color-border-default);
+}
+
+@media (min-width: 768px) {
+  .CareerItem {
+    min-height: 8ch;
+  }
+}
+
+@media (min-width: 768px) {
+  .CareerItem {
+    display: flex;
+    gap: var(--base-size-24);
+  }
+}
+
+.CareerItem-level {
+  font-family: var(--brand-fontStack-monospace);
+  font-size: var(--brand-text-size-100);
+  color: var(--brand-color-text-muted);
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .CareerItem-level {
+    flex: 0.75 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .CareerItem-titleWrapper {
+    flex: 1 1;
+  }
+}
+
+.CareerItem-title {
+  margin-top: var(--base-size-16);
+}
+
+@media (min-width: 768px) {
+  .CareerItem-title {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.CareerItem-label {
+  margin-top: var(--base-size-8);
+  color: var(--brand-color-text-muted);
+}
+
+.CareerItem-description {
+  color: var(--brand-color-text-muted);
+}
+
+.CareerItem-responsibilitiesWrapper {
+  max-width: none;
+}
+
+.CareerItem-responsibilitiesDetails::after {
+  border: none;
+}
