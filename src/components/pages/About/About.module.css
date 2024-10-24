@@ -1,9 +1,5 @@
-:root {
-  --site-max-width: 1280px;
-}
-
 .Section-container {
-  max-width: var(--site-max-width);
+  max-width: 1280px;
   padding: 0 var(--base-size-20);
   margin: 0 auto;
 }
