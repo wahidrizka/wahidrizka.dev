@@ -10,7 +10,7 @@ import {
 	Text,
 	UnorderedList,
 } from "@primer/react-brand";
-import { careers } from "@/data/careers";
+import { careers, educations } from "@/data";
 
 export const About: React.FC = () => {
 	const [selectedTab, setSelectedTab] = useState<number>(1);
@@ -82,53 +82,57 @@ export const About: React.FC = () => {
 				></div>
 
 				{selectedTab === 1 && (
-					<Box
-						padding={{ narrow: 28, regular: 32, wide: 40 }}
-						backgroundColor="subtle"
-						borderRadius="xlarge"
-						className={clsx(styles["Education"])}
-					>
-						<Heading
-							as="h3"
-							size="5"
-							className={clsx(styles["EducationHeading"])}
-						>
-							<span
-								className={clsx(
-									styles["EducationChip"],
-									styles["EducationChip--green"]
-								)}
-							/>
-							Feb 2021 - Jul 2021
-						</Heading>
-						<ol className={clsx(styles["EducationList"])}>
-							<li className={clsx(styles["EducationItem"])}>
-								<span className={clsx(styles["EducationItem-level"])}>
-									Non-formal Education
-								</span>
-								<div className={clsx(styles["EducationItem-titleWrapper"])}>
-									<Heading as="h4" size="6" className={clsx(styles[""])}>
-										Bangkit Academy 2021
-									</Heading>
-									<Text
-										as="div"
-										size="100"
-										weight="medium"
-										className={clsx(styles["EducationItem-label"])}
-									>
-										6 months - Remote
-									</Text>
-								</div>
-								<Text
-									as="p"
-									className={clsx(styles["EducationItem-description"])}
+					<div>
+						{educations.map((education) => (
+							<Box
+								key={education.id}
+								padding={{ narrow: 28, regular: 32, wide: 40 }}
+								backgroundColor="subtle"
+								borderRadius="xlarge"
+								className={clsx(styles["Education"])}
+							>
+								<Heading
+									as="h3"
+									size="5"
+									className={clsx(styles["EducationHeading"])}
 								>
-									Cloud Computing
-								</Text>
-							</li>
-							<li></li>
-						</ol>
-					</Box>
+									<span
+										className={clsx(
+											styles["EducationChip"],
+											styles["EducationChip--green"]
+										)}
+									/>
+									{education.period}
+								</Heading>
+								<ol className={clsx(styles["EducationList"])}>
+									<li className={clsx(styles["EducationItem"])}>
+										<span className={clsx(styles["EducationItem-level"])}>
+											{education.type}
+										</span>
+										<div className={clsx(styles["EducationItem-titleWrapper"])}>
+											<Heading as="h4" size="6" className={clsx(styles[""])}>
+												{education.institution}
+											</Heading>
+											<Text
+												as="div"
+												size="100"
+												weight="medium"
+												className={clsx(styles["EducationItem-label"])}
+											>
+												*{education.periodMonths}
+											</Text>
+										</div>
+										<Text
+											as="p"
+											className={clsx(styles["EducationItem-description"])}
+										>
+											{education.major}
+										</Text>
+									</li>
+								</ol>
+							</Box>
+						))}
+					</div>
 				)}
 				{selectedTab === 2 && (
 					<div>

@@ -8,7 +8,7 @@ export default function AboutPage() {
 				title="Wahid Rizka | About"
 				description="I am a Fullstack Developer with a strong interest in Software Engineering."
 			/>
-			<div data-color-mode="dark" style={{ height: "300vh" }}>
+			<div data-color-mode="dark">
 				<About />
 			</div>
 		</AppLayout>
