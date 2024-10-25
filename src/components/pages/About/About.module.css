@@ -1,3 +1,8 @@
+.Backround {
+  position: relative;
+  background-color: var(--brand-color-canvas-default);
+}
+
 .Section-container {
   max-width: 1280px;
   padding: 0 var(--base-size-20);
@@ -72,7 +77,7 @@
   align-items: center;
   gap: var(--base-size-4);
   padding: var(--base-size-8);
-  background-color: var(--base-color-scale-gray-1);
+  background-color: var(--brand-color-canvas-subtle);
   border-radius: 100px
 }
 
@@ -85,7 +90,7 @@
   display: block;
   pointer-events: none;
   content: "";
-  border: 1px solid var(--base-color-scale-gray-2);
+  border: 1px solid var(--brand-button-secondary-borderColor-rest);
   -webkit-mask-image: linear-gradient(rgba(0, 0, 0, .08), rgba(0, 0, 0, .04));
   mask-image: linear-gradient(rgba(0, 0, 0, .08), rgba(0, 0, 0, .04));
   border-radius: inherit
@@ -97,7 +102,7 @@
   padding: var(--base-size-8) 0;
   font-weight: 500;
   line-height: 22px;
-  color: var(--brand-color-text-default);
+  color: var(--brand-button-secondary-fgColor-rest);
   cursor: pointer;
   background-color: transparent;
   border: 1px solid transparent;
@@ -107,7 +112,7 @@
 
 .ToggleButton:active,
 .ToggleButton:hover {
-  background-color: var(--base-color-scale-white-0)
+  background-color: var(--brand-button-secondary-bgColor-hover)
 }
 
 .ToggleButton.isSelected {
@@ -123,7 +128,6 @@
   position: absolute;
   width: 160px;
   height: 40px;
-  background: linear-gradient(var(--base-color-scale-white-0), hsla(0, 0%, 100%, .5));
   border-radius: inherit;
   transition: transform .6s cubic-bezier(.3, 0, 0, 1)
 }
@@ -145,9 +149,9 @@
   display: block;
   pointer-events: none;
   content: "";
-  background-color: var(--base-color-scale-white-0);
+  background-color: var(--brand-button-secondary-bgColor-hover);
   background-clip: padding-box;
-  border: 2px solid var(--brand-color-border-default);
+  border: 1px solid var(--brand-button-secondary-borderColor-active);
   border-radius: inherit
 }
 
@@ -185,6 +189,18 @@
 
 .Career {
   position: relative;
+  animation: Career-anim .6s cubic-bezier(.22, .56, .23, .89);
+}
+
+@keyframes Career-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(24px)
+  }
+}
+
+.Career + .Career {
+  margin-top: var(--base-size-24);
 }
 
 .Career::before {
@@ -219,8 +235,8 @@
   border-radius: 24px;
 }
 
-.CareerChip--red {
-  background-color: #fe5530;
+.CareerChip--blue {
+  background-color: var(--brand-color-focus);
 }
 
 .CareerList {
@@ -293,4 +309,123 @@
 
 .CareerItem-responsibilitiesDetails::after {
   border: none;
+}
+
+
+/* Education's Component */
+
+.Education {
+  position: relative;
+  animation: Education-anim .6s cubic-bezier(.22, .56, .23, .89);
+}
+
+@keyframes Education-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(24px)
+  }
+}
+
+.Education + .Education {
+  margin-top: var(--base-size-24);
+}
+
+.Education::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  content: "";
+  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .25));
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, .25));
+  border: 1px solid var(--brand-color-border-default);
+  border-radius: inherit;
+}
+
+.EducationHeading {
+  margin-bottom: var(--base-size-24);
+  font-weight: 700;
+  font-stretch: 75%;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: -.005em;
+}
+
+.EducationChip {
+  display: inline-block;
+  width: 26px;
+  height: 12px;
+  margin-right: var(--base-size-16);
+  vertical-align: 6px;
+  border-radius: 24px;
+}
+
+.EducationChip--green {
+  background-color: var(--brand-color-success-fg);
+}
+
+.EducationList {
+  list-style: none;
+}
+
+.EducationItem {
+  padding-top: var(--base-size-24);
+  margin-top: var(--base-size-28);
+  border: 0;
+  border-top: 1px solid var(--brand-color-border-default);
+}
+
+@media (min-width: 768px) {
+  .EducationItem {
+    min-height: 8ch;
+  }
+}
+
+@media (min-width: 768px) {
+  .EducationItem {
+    display: flex;
+    gap: var(--base-size-24);
+  }
+}
+
+.EducationItem-level {
+  font-family: var(--brand-fontStack-monospace);
+  font-size: var(--brand-text-size-100);
+  color: var(--brand-color-text-muted);
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .EducationItem-level {
+    flex: 0.75 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .EducationItem-titleWrapper {
+    flex: 1 1;
+  }
+}
+
+.EducationItem-title {
+  margin-top: var(--base-size-16);
+}
+
+@media (min-width: 768px) {
+  .EducationItem-title {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.EducationItem-label {
+  margin-top: var(--base-size-8);
+  color: var(--brand-color-text-muted);
+}
+
+.EducationItem-description {
+  color: var(--brand-color-text-muted);
 }

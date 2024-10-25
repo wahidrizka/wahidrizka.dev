@@ -7,7 +7,7 @@
 
 @media (min-width: 768px) {
   .NavMobile {
-      display:none
+    display: none
   }
 }
 
@@ -27,7 +27,7 @@
   pointer-events: none;
   transition: -webkit-backdrop-filter .2s ease-out;
   transition: backdrop-filter .2s ease-out;
-  transition: backdrop-filter .2s ease-out,-webkit-backdrop-filter .2s ease-out
+  transition: backdrop-filter .2s ease-out, -webkit-backdrop-filter .2s ease-out
 }
 
 .NavMobile--isOpen .NavMobile__backdrop {
@@ -40,8 +40,8 @@
   position: relative;
   color: var(--brand-color-text-default);
   pointer-events: auto;
-  background: #f9fafb;
-  border: 1px solid rgba(0,0,0,.1);
+  background: radial-gradient(267.59% 941.35% at 50% 0, hsla(0, 0%, 100%, .95) 0, hsla(0, 0%, 100%, .9) 39.66%, hsla(0, 0%, 100%, .68) 100%);
+  border: 1px solid rgba(0, 0, 0, .1);
   border-radius: var(--brand-borderRadius-large);
   transition: height .4s ease-out
 }
@@ -52,8 +52,8 @@
   width: 100%;
   height: 100%;
   grid-template-rows: 1fr;
-  transition: opacity .2s,grid-template-rows .4s;
-  transition-delay: .4s,0s
+  transition: opacity .2s, grid-template-rows .4s;
+  transition-delay: .4s, 0s
 }
 
 .NavMobile--hasScrolled .NavMobile__preScrollContent,
@@ -66,7 +66,7 @@
   transition-delay: 0s
 }
 
-.NavMobile__preScrollContent>div {
+.NavMobile__preScrollContent > div {
   display: flex;
   width: 100%;
   height: 100%;
@@ -91,7 +91,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--base-size-32);
-  border-top: 1px solid rgba(0,0,0,.1)
+  border-top: 1px solid rgba(0, 0, 0, .1)
 }
 
 .NavMobile__preScrollContent-menu li[data-hidden=true] {
@@ -115,8 +115,8 @@
   grid-template-rows: 0fr;
   pointer-events: none;
   opacity: 0;
-  transition: opacity .2s,grid-template-rows .4s;
-  transition-delay: 0s,0s
+  transition: opacity .2s, grid-template-rows .4s;
+  transition-delay: 0s, 0s
 }
 
 .NavMobile--hasScrolled .NavMobile__postScrollContent,
@@ -125,10 +125,10 @@
   pointer-events: auto;
   grid-template-rows: 1fr;
   opacity: 1;
-  transition-delay: .4s,0s
+  transition-delay: .4s, 0s
 }
 
-.NavMobile__postScrollContent>div {
+.NavMobile__postScrollContent > div {
   overflow: hidden
 }
 
@@ -142,7 +142,7 @@
 }
 
 .NavMobile__postScrollContent-header a {
-  --brand-color-text-default: #fff
+  --brand-color-text-default: var(--brand-color-scale-white-0)
 }
 
 .NavMobile__postScrollContent-headerLabel {
@@ -151,20 +151,20 @@
   align-items: center
 }
 
-.NavMobile__postScrollContent-headerLabel>span:first-of-type {
+.NavMobile__postScrollContent-headerLabel > span:first-of-type {
   color: var(--brand-color-text-subtle)
 }
 
-.NavMobile__postScrollContent-headerLabel>span:nth-of-type(2) {
+.NavMobile__postScrollContent-headerLabel > span:nth-of-type(2) {
   display: flex;
   gap: var(--base-size-4)
 }
 
-.NavMobile__postScrollContent-headerLabel>svg {
+.NavMobile__postScrollContent-headerLabel > svg {
   transition: transform .2s ease-out
 }
 
-.NavMobile--isOpen .NavMobile__postScrollContent-headerLabel>svg {
+.NavMobile--isOpen .NavMobile__postScrollContent-headerLabel > svg {
   transform: rotate(180deg)
 }
 
@@ -187,7 +187,7 @@
   grid-gap: var(--base-size-32);
   gap: var(--base-size-32);
   padding: var(--base-size-32) var(--base-size-16) var(--base-size-48);
-  border-top: 1px solid rgba(0,0,0,.1)
+  border-top: 1px solid rgba(0, 0, 0, .1)
 }
 
 .NavMobile__menu ul {

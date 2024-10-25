@@ -1,7 +1,7 @@
 /*
  * Main styles for the navigation bar.
  */
- .NavBar {
+.NavBar {
   position: relative;
   z-index: 90;
   font-weight: 550;
@@ -387,6 +387,7 @@
   margin-left: auto;
   min-width: 0;
 }
+
 .NavBar-search-trigger {
   display: flex;
   align-items: center;
@@ -459,6 +460,7 @@
 }
 
 @media screen and (min-width: 48rem) {
+
   .NavBar-search-button:hover,
   .NavBar-menu-button:hover {
     border: var(--brand-borderWidth-thick) solid var(--brand-SubdomainNavBar-border-button-hover);
@@ -637,8 +639,7 @@
 
 .NavBar-search-result-item {
   padding: var(--base-size-16) var(--base-size-8);
-  border-bottom: solid var(--brand-borderWidth-thin, 1px)
-    var(--brand-SubdomainNavBar-search-results-border-default, #b7bfc7);
+  border-bottom: solid var(--brand-borderWidth-thin, 1px) var(--brand-SubdomainNavBar-search-results-border-default, #b7bfc7);
 }
 
 .NavBar-search-result-item[aria-selected='true'] a {
@@ -685,6 +686,7 @@
     opacity: 0;
     transform: translateY(-20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -695,6 +697,7 @@
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -705,6 +708,7 @@
     scale: 0.98;
     box-shadow: 0px 8px 0 rgba(1, 4, 9, 0.15);
   }
+
   100% {
     scale: 1;
     box-shadow: 0px 8px 24px rgba(1, 4, 9, 0.15);
@@ -727,8 +731,8 @@
   max-width: 1248px;
   height: 66px;
   margin: var(--base-size-8) var(--base-size-8) 0 var(--base-size-8);
-  background: radial-gradient(267.59% 941.35% at 50% 0,hsla(0,0%,100%,.95) 0,hsla(0,0%,100%,.9) 39.66%,hsla(0,0%,100%,.68) 100%);
-  border: 1px solid rgba(0,0,0,.1);
+  background: radial-gradient(267.59% 941.35% at 50% 0, hsla(0, 0%, 100%, .95) 0, hsla(0, 0%, 100%, .9) 39.66%, hsla(0, 0%, 100%, .68) 100%);
+  border: 1px solid rgba(0, 0, 0, .1);
   border-radius: var(--brand-borderRadius-large);
   transition: border-color .4s
 }
@@ -739,20 +743,20 @@
 
 @media (min-width: 768px) {
   .NavDesktop {
-      display:block
+    display: block
   }
 }
 
 @media (min-width: 1264px) {
   .NavDesktop {
-      margin:var(--base-size-16) auto 0 auto;
-      background: radial-gradient(67.87% 1366.67% at 50% 0,hsla(0,0%,100%,.95) 0,hsla(0,0%,100%,.85) 85.19%);
-      -webkit-backdrop-filter: blur(32.5px);
-      backdrop-filter: blur(32.5px)
+    margin: var(--base-size-16) auto 0 auto;
+    background: radial-gradient(67.87% 1366.67% at 50% 0, hsla(0, 0%, 100%, .95) 0, hsla(0, 0%, 100%, .85) 85.19%);
+    -webkit-backdrop-filter: blur(32.5px);
+    backdrop-filter: blur(32.5px)
   }
 }
 
-.NavDesktop>div {
+.NavDesktop > div {
   height: 64px;
   padding: 0 8px 0 28px
 }
@@ -790,14 +794,17 @@
   transition: opacity .4s
 }
 
-.NavCta--alwaysVisible__HjWnI,.NavDesktop--hasScrolled .NavCta__Zveio {
+.NavCta--alwaysVisible__HjWnI,
+.NavDesktop--hasScrolled .NavCta__Zveio {
   pointer-events: auto;
   opacity: 1
 }
 
 @media (max-width: 768px) {
-  .NavDesktop [class^=Navbar_NavBar-button-area],.NavDesktop [class^=Navbar_NavBar-primary-nav-list-item] {
-      animation:none
+
+  .NavDesktop [class^=Navbar_NavBar-button-area],
+  .NavDesktop [class^=Navbar_NavBar-primary-nav-list-item] {
+    animation: none
   }
 }
 
@@ -806,30 +813,30 @@
 }
 
 @media (min-width: 544px) {
-  .NavDesktop [class^=Navbar_NavBar-menu-wrapper]>div>p {
-      display:none
+  .NavDesktop [class^=Navbar_NavBar-menu-wrapper] > div > p {
+    display: none
   }
 }
 
-.NavDesktop .menu-navigation>ul {
+.NavDesktop .menu-navigation > ul {
   max-width: 300px
 }
 
 @media (min-width: 1000px) {
-  .NavDesktop .menu-navigation>ul {
-      max-width:500px
+  .NavDesktop .menu-navigation > ul {
+    max-width: 500px
   }
 }
 
 @media (min-width: 1200px) {
-  .NavDesktop .menu-navigation>ul {
-      max-width:none
+  .NavDesktop .menu-navigation > ul {
+    max-width: none
   }
 }
 
 @media (min-width: 1300px) {
-  .NavDesktop .menu-navigation>ul {
-      justify-content:center
+  .NavDesktop .menu-navigation > ul {
+    justify-content: center
   }
 }
 
@@ -839,23 +846,23 @@
 
 @media (min-width: 544px) {
   .NavDesktop:has(.NavLogo__sLNe2) [class^=Navbar_NavBar-title]:not([class*=title-]) {
-      display:flex;
-      padding: 0;
-      margin-right: var(--base-size-8);
-      color: transparent;
-      align-items: center
+    display: flex;
+    padding: 0;
+    margin-right: var(--base-size-8);
+    color: transparent;
+    align-items: center
   }
 
-  .NavDesktop:has(.NavLogo__sLNe2) [class^=Navbar_NavBar-inner-container]>nav:first-of-type {
-      position: relative;
-      display: flex;
-      align-items: center
+  .NavDesktop:has(.NavLogo__sLNe2) [class^=Navbar_NavBar-inner-container] > nav:first-of-type {
+    position: relative;
+    display: flex;
+    align-items: center
   }
 
   .NavDesktop:has(.NavLogo__sLNe2) .NavLogo__sLNe2 {
-      display: block;
-      width: 180px;
-      height: auto;
-      pointer-events: none
+    display: block;
+    width: 180px;
+    height: auto;
+    pointer-events: none
   }
 }

@@ -9,7 +9,7 @@ export default function Home() {
 				description="I am a Fullstack Developer with a strong interest in Software Engineering."
 			/>
 
-			<div>
+			<div data-color-mode="dark">
 				<Intro />
 			</div>
 		</AppLayout>

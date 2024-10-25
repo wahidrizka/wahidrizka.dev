@@ -17,11 +17,7 @@ import { TechnologyBadge } from "@/components";
 
 export const Intro = () => {
 	return (
-		<div
-			data-color-mode="light"
-			style={{ backgroundColor: "var(--base-color-scale-gray-1)" }}
-			className={clsx(styles["Section-rounded"])}
-		>
+		<div className={clsx(styles["Section-rounded"])}>
 			<AnimationProvider>
 				<Grid>
 					<Grid.Column>

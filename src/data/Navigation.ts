@@ -16,13 +16,6 @@ export const NavigationItems: NavigationItem[] = [
 		hidden: false,
 	},
 	{
-		id: "work",
-		url: "/work",
-		title: "Work",
-		icon: false,
-		hidden: true,
-	},
-	{
 		id: "projects",
 		url: "/projects",
 		title: "Projects",

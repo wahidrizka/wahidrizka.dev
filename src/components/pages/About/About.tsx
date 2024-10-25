@@ -10,6 +10,7 @@ import {
 	Text,
 	UnorderedList,
 } from "@primer/react-brand";
+import { careers } from "@/data/careers";
 
 export const About: React.FC = () => {
 	const [selectedTab, setSelectedTab] = useState<number>(1);
@@ -19,7 +20,7 @@ export const About: React.FC = () => {
 	};
 
 	return (
-		<section className={clsx("relative")}>
+		<section className={clsx(styles["Backround"])}>
 			<div className={clsx(styles["Section-container"])}>
 				<div></div>
 				<SectionIntro align="center" className={clsx(styles["Intro"])}>
@@ -80,107 +81,138 @@ export const About: React.FC = () => {
 					aria-hidden="false"
 				></div>
 
-				{selectedTab === 1 && <div>Content 1</div>}
-				{selectedTab === 2 && (
-					<AnimationProvider>
-						<Box
-							animate="scale-in-up"
-							padding={{ narrow: 28, regular: 32, wide: 40 }}
-							backgroundColor="subtle"
-							borderRadius="xlarge"
-							className={clsx(styles["Career"])}
+				{selectedTab === 1 && (
+					<Box
+						padding={{ narrow: 28, regular: 32, wide: 40 }}
+						backgroundColor="subtle"
+						borderRadius="xlarge"
+						className={clsx(styles["Education"])}
+					>
+						<Heading
+							as="h3"
+							size="5"
+							className={clsx(styles["EducationHeading"])}
 						>
-							<Heading
-								as="h3"
-								size="5"
-								className={clsx(styles["CareerHeading"])}
-							>
-								<span
-									className={clsx(
-										styles["CareerChip"],
-										styles["CareerChip--red"]
-									)}
-								/>
-								Oct 2023 - Oct 2024
-							</Heading>
-							<ol className={clsx(styles["CareerList"])}>
-								<li className={clsx(styles["CareerItem"])}>
-									<span className={clsx(styles["CareerItem-level"])}>
-										Internship
-									</span>
-									<div className={clsx(styles["CareerItem-titleWrapper"])}>
-										<Heading as="h4" size="6" className={clsx(styles[""])}>
-											Halal Pro Web Design (HPWD)
-										</Heading>
-										<Text
-											as="div"
-											size="100"
-											weight="medium"
-											className={clsx(styles["CareerItem-label"])}
-										>
-											3 months - Remote
-										</Text>
-									</div>
+							<span
+								className={clsx(
+									styles["EducationChip"],
+									styles["EducationChip--green"]
+								)}
+							/>
+							Feb 2021 - Jul 2021
+						</Heading>
+						<ol className={clsx(styles["EducationList"])}>
+							<li className={clsx(styles["EducationItem"])}>
+								<span className={clsx(styles["EducationItem-level"])}>
+									Non-formal Education
+								</span>
+								<div className={clsx(styles["EducationItem-titleWrapper"])}>
+									<Heading as="h4" size="6" className={clsx(styles[""])}>
+										Bangkit Academy 2021
+									</Heading>
 									<Text
-										as="p"
-										className={clsx(styles["CareerItem-description"])}
+										as="div"
+										size="100"
+										weight="medium"
+										className={clsx(styles["EducationItem-label"])}
 									>
-										Front-End Developer
+										6 months - Remote
 									</Text>
-								</li>
-								<li>
-									<FAQ
+								</div>
+								<Text
+									as="p"
+									className={clsx(styles["EducationItem-description"])}
+								>
+									Cloud Computing
+								</Text>
+							</li>
+							<li></li>
+						</ol>
+					</Box>
+				)}
+				{selectedTab === 2 && (
+					<div>
+						{careers.map((career) => (
+							<Box
+								key={career.id}
+								padding={{ narrow: 28, regular: 32, wide: 40 }}
+								backgroundColor="subtle"
+								borderRadius="xlarge"
+								className={clsx(styles["Career"])}
+							>
+								<Heading
+									as="h3"
+									size="5"
+									className={clsx(styles["CareerHeading"])}
+								>
+									<span
 										className={clsx(
-											styles["CareerItem-responsibilitiesWrapper"]
+											styles["CareerChip"],
+											styles["CareerChip--blue"]
 										)}
-									>
-										<FAQ.Item
+									/>
+									{career.period}
+								</Heading>
+								<ol className={clsx(styles["CareerList"])}>
+									<li className={clsx(styles["CareerItem"])}>
+										<span className={clsx(styles["CareerItem-level"])}>
+											{career.jobLevel}
+										</span>
+										<div className={clsx(styles["CareerItem-titleWrapper"])}>
+											<Heading as="h4" size="6" className={clsx(styles[""])}>
+												{career.company}
+											</Heading>
+											<Text
+												as="div"
+												size="100"
+												weight="medium"
+												className={clsx(styles["CareerItem-label"])}
+											>
+												{career.periodMonths} - {career.workSystem}
+											</Text>
+										</div>
+										<Text
+											as="p"
+											className={clsx(styles["CareerItem-description"])}
+										>
+											{career.role}
+										</Text>
+									</li>
+									<li>
+										<FAQ
 											className={clsx(
-												styles["CareerItem-responsibilitiesDetails"]
+												styles["CareerItem-responsibilitiesWrapper"]
 											)}
 										>
-											<FAQ.Question>
-												<Text as="div" size="200" weight="semibold">
-													Responsibilities
-												</Text>
-											</FAQ.Question>
-											<FAQ.Answer>
-												<UnorderedList>
-													<UnorderedList.Item>
-														Making standard web-based application interface
-														designs more eye-catching and intuitive.
-													</UnorderedList.Item>
-													<UnorderedList.Item>
-														Create various front page displays for web pages,
-														especially for Ecommerce purposes.
-													</UnorderedList.Item>
-													<UnorderedList.Item>
-														Product article design, where you have to add
-														aesthetic elements to each existing product article.
-													</UnorderedList.Item>
-													<UnorderedList.Item>
-														Refine HPWD web interface. There are several
-														websites that need to be continuously revamped, both
-														the main website (opencart.id), then the websites
-														for overseas clients: hpwebdesign.io, opencart.id,
-														etc.
-													</UnorderedList.Item>
-													<UnorderedList.Item>
-														Involved in creating graphic elements such as Logos,
-														Banners, and graphic elements required for a
-														complete front page display.
-													</UnorderedList.Item>
-													<UnorderedList.Item>
-														Creating an Ecommerce Theme (OpenCart).
-													</UnorderedList.Item>
-												</UnorderedList>
-											</FAQ.Answer>
-										</FAQ.Item>
-									</FAQ>
-								</li>
-							</ol>
-						</Box>
-					</AnimationProvider>
+											<FAQ.Item
+												className={clsx(
+													styles["CareerItem-responsibilitiesDetails"]
+												)}
+											>
+												<FAQ.Question>
+													<Text as="div" size="200" weight="semibold">
+														Responsibilities:
+													</Text>
+												</FAQ.Question>
+												<FAQ.Answer>
+													<UnorderedList variant="checked">
+														{career.responsibilities.map((responsibility) => (
+															<UnorderedList.Item
+																key={responsibility.id}
+																leadingVisualFill="var(--brand-color-success-fg)"
+															>
+																{responsibility.description}
+															</UnorderedList.Item>
+														))}
+													</UnorderedList>
+												</FAQ.Answer>
+											</FAQ.Item>
+										</FAQ>
+									</li>
+								</ol>
+							</Box>
+						))}
+					</div>
 				)}
 				{selectedTab === 3 && <div>Content 3</div>}
 			</div>
