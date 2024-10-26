@@ -1,4 +1,4 @@
-import { NavBar, NavMobile } from "@/components";
+import { NavBar, NavMobile, MinimalFooter } from "@/components";
 import { NavigationItems } from "@/data";
 import { ThemeProvider } from "@primer/react-brand";
 import { DownloadIcon } from "@primer/styled-octicons";
@@ -36,8 +36,16 @@ export function AppLayout({
 					{/* NavMobile */}
 					<NavMobile></NavMobile>
 				</div>
+
 				<main className="font-mktg">{children}</main>
-				<footer></footer>
+
+				<div data-color-mode="dark">
+					<MinimalFooter className="pt-12">
+						<MinimalFooter.Link href="https://github.com/enterprise">
+							Contact me
+						</MinimalFooter.Link>
+					</MinimalFooter>
+				</div>
 			</ThemeProvider>
 		</>
 	);
