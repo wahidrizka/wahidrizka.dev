@@ -3,6 +3,8 @@ import { NavigationItems } from "@/data";
 import { ThemeProvider } from "@primer/react-brand";
 import { DownloadIcon } from "@primer/styled-octicons";
 
+import { Analytics } from "@vercel/analytics/react";
+
 export function AppLayout({
 	children,
 	colorMode,
@@ -12,6 +14,7 @@ export function AppLayout({
 }) {
 	return (
 		<>
+			<Analytics />
 			<ThemeProvider colorMode={colorMode || "light"} dir="ltr">
 				<div>
 					{/* NavDesktop */}
