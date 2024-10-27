@@ -64,7 +64,7 @@ export const About: React.FC = () => {
 							Career
 						</button>
 
-						<button
+						{/* <button
 							role="tab"
 							className={clsx(
 								styles["ToggleButton"],
@@ -73,7 +73,7 @@ export const About: React.FC = () => {
 							onClick={() => handleToggle(3)}
 						>
 							Resume
-						</button>
+						</button> */}
 					</div>
 				</div>
 				<div
@@ -218,7 +218,6 @@ export const About: React.FC = () => {
 						))}
 					</div>
 				)}
-				{selectedTab === 3 && <div>Content 3</div>}
 			</div>
 		</section>
 	);
