@@ -3,7 +3,13 @@ import React, { PropsWithChildren } from "react";
 import clsx from "clsx";
 import { LogoGithubIcon } from "@primer/octicons-react";
 
-import { ColorModesEnum, Stack, Text, useTheme } from "@primer/react-brand";
+import {
+	ColorModesEnum,
+	Heading,
+	Stack,
+	Text,
+	useTheme,
+} from "@primer/react-brand";
 import { BaseProps } from "../component-helpers";
 import NextLink from "next/link";
 
@@ -242,9 +248,7 @@ function SocialLogomarks({
 								fill={colorMode === ColorModesEnum.DARK ? "white" : "black"}
 								size="medium"
 							/> */}
-							<Text as="p" className={clsx(styles["Footer__title"])}>
-								WAHIDRIZKA'24
-							</Text>
+							<Heading size="6">WAHIDRIZKA'24</Heading>
 						</NextLink>
 					</div>
 					{socialLinks !== false ? (

@@ -114,9 +114,3 @@
   border-bottom-color: var(--brand-color-text-muted);
   text-decoration: none;
 }
-
-@media screen and (max-width: 767px) {
-  .Footer__title {
-    font-weight: var(--base-text-weight-bold);
-  }
-}
