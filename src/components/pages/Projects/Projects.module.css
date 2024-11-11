@@ -1,0 +1,116 @@
+.Section-container {
+  max-width: 544px;
+  padding-right: var(--base-size-16);
+  padding-left: var(--base-size-16);
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .Section-container {
+    max-width: none;
+    padding-right: var(--base-size-40);
+    padding-left: var(--base-size-40);
+  }
+}
+
+@media (min-width: 1012px) {
+  .Section-container {
+    padding-right: var(--base-size-64);
+    padding-left: var(--base-size-64);
+  }
+}
+
+@media (min-width: 1280px) {
+  .Section-container {
+    max-width: 1408px;
+    padding-right: var(--base-size-80);
+    padding-left: var(--base-size-80);
+  }
+}
+
+.Spacer {
+  --Spacer-size: 64px;
+  --Spacer-size1012: 128px;
+  display: block;
+  height: var(--Spacer-size, 80px);
+}
+
+@media (min-width: 544px) {
+  .Spacer {
+    height: var(--Spacer-size544, var(--Spacer-size, 96px));
+  }
+}
+
+@media (min-width: 768px) {
+  .Spacer {
+    height: var(--Spacer-size768, var(--Spacer-size544, var(--Spacer-size, 112px)));
+  }
+}
+
+@media (min-width: 1012px) {
+  .Spacer {
+    height: var(--Spacer-size1012, var(--Spacer-size768, var(--Spacer-size544, var(--Spacer-size, 128px))));
+  }
+}
+
+@media (min-width: 1280px) {
+  .Spacer {
+    height: var(--Spacer-size1280, var(--Spacer-size1012, var(--Spacer-size768, var(--Spacer-size544, var(--Spacer-size, 156px)))));
+  }
+}
+
+@media (min-width: 1012px) {
+  .Bento {
+    --Bento-paddingX: var(--base-size-64);
+    --Bento-paddingY: var(--base-size-64);
+  }
+}
+
+@media (min-width: 544px) {
+  .Bento {
+    --Bento-paddingX: var(--base-size-48);
+    --Bento-paddingY: 56px;
+  }
+}
+
+.Bento {
+  --Bento-paddingX: var(--base-size-24);
+  --Bento-paddingY: var(--base-size-32);
+}
+
+.BentoItem {
+  grid-gap: var(--Bento-paddingY);
+}
+
+.BentoItem1 {}
+
+@media (min-width: 1012px) {
+
+  .BentoItem2,
+  .BentoItem3 {
+    grid-template-rows: 1fr 340px;
+  }
+}
+
+.gradientBorder {
+  position: relative;
+  border-color: transparent;
+}
+
+.gradientBorder::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  content: "";
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+  border-color: #d8dee4;
+  border-radius: inherit;
+}
+
+.hasDarkGradientBorder .gradientBorder::before {
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+  border: 1px solid var(--brand-color-border-default);
+}

@@ -1,7 +1,7 @@
-import { SEO } from "@/components";
+import { Projects, SEO } from "@/components";
 import { AppLayout } from "@/layouts";
 
-export default function Projects() {
+export default function ProjectsPage() {
 	return (
 		<AppLayout>
 			<SEO
@@ -9,8 +9,11 @@ export default function Projects() {
 				description="I am a Fullstack Developer with a strong interest in Software Engineering."
 			/>
 
-			<div data-color-mode="dark">
-				<h1>Coming Soon!</h1>
+			<div
+				data-color-mode="dark"
+				style={{ backgroundColor: "var(--brand-color-canvas-default)" }}
+			>
+				<Projects />
 			</div>
 		</AppLayout>
 	);
